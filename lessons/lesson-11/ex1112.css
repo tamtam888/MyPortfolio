@@ -1,0 +1,15 @@
+.container {
+    width: 200px;
+    /*height: 200px;*/
+    background-color: lightgray;
+    display: flex;
+    /*align-items: stretch; */
+    justify-content: space-around;
+    
+}
+
+.box {
+    width: 70px;
+    height: 70px;
+    background-color: cyan;
+}

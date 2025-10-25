@@ -1,0 +1,119 @@
+  
+  <head>
+  <title>הדף של תמר קרוון</title>
+  <style>
+  
+  .double-line {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-color: #008000;
+    text-decoration-thickness: 4px;
+    
+    border-bottom: 4px double #008000;
+}
+
+.orange-line {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #FFA500;
+    
+    
+    border-bottom: 2px solid #FFA500;
+}
+
+.dotted-line {
+    text-decoration-line: underline line-through;
+    text-decoration-style: dotted;
+    text-decoration-color: #000000;
+    text-decoration-thickness: 2px;
+    
+    
+    border-bottom: 2px dotted #000000;
+}
+
+        body {
+            background-color: #f0f8ff; 
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 44px;
+            color: #800080; 
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #4682b4; 
+            font-size: 36px;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.6;
+            letter-spacing: 1px; 
+            word-spacing: 2px; 
+        }
+        p em {
+            font-size: 30px; 
+            color: #ff4500; 
+        }
+        p strong {
+            font-weight: bold;
+            color: #ff1493; 
+        }
+        a {
+            color: #ffffff; 
+            background-color: #0000ff; 
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #1e90ff;
+        }
+        ul, ol {
+            text-align: center;
+            list-style-position: inside;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            border: 5px solid #4682b4;
+            border-radius: 10px;
+        }
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: 5px solid #000000; 
+            border-radius: 10px;
+        }
+        .letter1 { color: #FF0000; } /* אדום */
+        .letter2 { color: #FF7F00; } /* כתום */
+        .letter3 { color: #FFFF00; } /* צהוב */
+        .letter4 { color: #00FF00; } /* ירוק */
+        .letter5 { color: #0000FF; } /* כחול */
+        .letter6 { color: #9400D3; } /* סגול }*/
+        .letter7 { color: #FF0000; } /* אדום */
+        .letter8 { color: #FF7F00; } /* כתום */
+        .letter9 { color: #FFFF00; } /* צהוב */
+        .letter10 { color: #00FF00; } /* ירוק */
+        .letter11 { color: #0000FF; } /* כחול */
+        .letter12 { color: #9400D3; } /* סגול }*/
+        .letter13 { color: #FF0000; } /* אדום */
+        .letter14 { color: #FF7F00; } /* כתום */
+        .letter15 { color: #FFFF00; } /* צהוב */
+        .letter16 { color: #00FF00; } /* ירוק */
+        .letter17 { color: #0000FF; } /* כחול */
+        .letter18 { color: #9400D3; } /* סגול }*/
+        .letter19 { color: #FF0000; } /* אדום */
+        .letter20 { color: #FF7F00; } /* כתום */
+        .letter21 { color: #FFFF00; } /* צהוב */
+        .letter22 { color: #00FF00; } /* ירוק */
+        .letter23 { color: #0000FF; } /* כחול */
+        .letter24 { color: #9400D3; } /* סגול }*/
+        
+    </style>
+</head>

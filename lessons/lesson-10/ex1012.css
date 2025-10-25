@@ -1,0 +1,23 @@
+.royal-family > div > div {
+    background-color: #00c3ff;  
+    color: white; 
+    padding: 10px;
+    margin: 5px;
+}
+.royal-family > div > div > div {
+    background-color: white;  
+    color: black;
+    padding: 10px;
+    margin: 5px;  
+}
+.royal-family div div div {
+    border: 2px solid red;
+}
+#george ~ div {
+    background-color: gold; 
+    color: black;
+}
+
+#charlotte + div {
+    color: blue; 
+}

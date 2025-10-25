@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Registration Form</title>
+  <script src="ex1304.js" defer></script> 
+</head>
+<body>
+
+  <h1>Registration Form</h1>
+  <p>Please fill in your details:</p>
+
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required> <br><br>
+
+    <label for="age">Your Age:</label>
+    <input type="number" id="age" name="age" min="18"><br><br>
+    
+    <label for="favcolor">Select your favorite color:</label>
+    <input id="favcolor" type="color" name="favcolor" />
+    <button type="button">Random color</button> <br><br>
+    
+    <label for="birthday">Enter your birth date:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+   
+    <p>Receive updates via:</p>
+
+    <input type="radio" id="contact_sms" name="contact_method" value="sms" onclick="onReceiveUpdateClick(event)">
+    <label for="contact_sms">SMS</label><br>
+
+    <input type="radio" id="contact_email" name="contact_method" value="email" onclick="onReceiveUpdateClick(event)">
+    <label for="contact_email">Email</label><br>
+
+    <input type="checkbox" id="remember_yes" name="remember_account" value="yes">
+    <label for="remember_yes">Remember Account on this computer.</label><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
+
+
+

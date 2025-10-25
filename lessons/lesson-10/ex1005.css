@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+.gallery {
+    width: 800;
+    margin-right: 0;
+    margin-left: auto;
+}
+    
+.img1 {
+    border: 3px solid black;
+    padding: 20px;  
+    margin: 30px 10px;
+}
+
+.img2 {
+    width: 300px;
+    border: 4px solid blue;
+    padding: 15px 10px 5px;
+    margin: 25px;
+}
+.img3 {
+    width: 300px;
+    border-width: 3px 6px 9px 12px; 
+    border-style: solid;
+    border-color: red green blue orange;
+    padding: 15px;
+    margin: 30px;
+}
+
+.img4 {
+    width: 350px;
+    border: 6px solid orange;
+    padding: 20px;
+    margin: 20px;
+}

@@ -1,0 +1,52 @@
+#art1 {
+    
+    width: 80px;
+    max-height: 100px;
+    margin: 10px;
+    padding: 20px;
+    border: blue dashed 2px;
+  }
+  
+  #art2 {
+   
+    width: 200px;
+    max-height: 150px;
+    margin: 2px;
+    padding: 15px;
+    border: red dotted 5px;
+  }
+  
+  #art3 {
+    width: 120px;
+    max-height: 200px;
+    margin: 2px;
+    padding: 5px;
+    border: green solid 10px;
+  }
+  
+  #art4 {
+    
+    width: 90px;
+    max-height: 200px;
+    margin: 10px;
+    padding: 5px;
+    border: orange double 4px;
+  }
+  
+  #art2, #art3 {
+    align-self: stretch;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  .gallery {
+    border: 1px solid black;
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+  

@@ -1,0 +1,36 @@
+/* צבע רקע כללי לדף */
+body {
+    background-color: beige;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* עיצוב כללי לכל הדגלים */
+.flag {
+    width: 300px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    border: 2px solid black;
+}
+
+/* פס כללי בתוך כל דגל */
+.stripe {
+    flex: 1;
+}
+
+/* דגל בולגריה */
+.bulgaria {
+    background: linear-gradient(to bottom, white 33.3%, green 33.3% 66.6%, red 66.6%);
+}
+
+/* דגל גרמניה */
+.germany {
+    background: linear-gradient(to bottom, black 33.3%, red 33.3% 66.6%, yellow 66.6%);
+}
+
+/* דגל הונגריה */
+.hungary {
+    background: linear-gradient(to bottom, red 33.3%, white 33.3% 66.6%, green 66.6%);
+}

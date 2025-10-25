@@ -1,0 +1,49 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+    align-items: left;
+}
+
+.todos-container {
+    width: 200px;
+    height: 300px;
+    background-color: #FCF4BD;
+    padding: 10px;
+    border-radius: 10px; /* פינות עגולות */
+    align-items: flex-start; /* יישור לשמאל */
+    
+    border-left: 1px solid black; /* גבול שמאלי דק */
+    border-top: 1px solid black;  /* גבול עליון דק */
+    border-right: 5px solid grey; /* גבול ימני עבה */
+    border-bottom: 5px solid grey; /* גבול תחתון עבה */
+}
+
+#title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #743ae0;
+    margin-left: 10px; /* שוליים שמאליים */
+    margin-top: 20px;  /* שוליים עליונים */
+    text-align: left; /* יישור לשמאל */
+}
+
+/* עיצוב הרשימה (ul) */
+.todos-list {
+    list-style-type: none; /* מסיר נקודות מהרשימה */
+    padding: 0; /* מסיר ריווח פנימי */
+    margin: 0; /* מסיר ריווח חיצוני */
+}
+
+/* עיצוב כל משימה */
+.todo {
+    width: 150px;
+    background-color: Gainsboro;
+    padding: 10px; /* ריווח פנימי של הטקסט */
+    margin: 5px 0;
+    border-radius: 5px; /* פינות עגולות */
+    font-size: 16px;
+    text-align: left; /* יישור לשמאל */
+    border: 1px dashed blue; /* גבול מקווקו בכחול */
+}

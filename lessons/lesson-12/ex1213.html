@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Create a new meeting</title>
+    <link rel="stylesheet" href="ex1213.css">
+    <script src="ex1213.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Create a new meeting</h1>
+        
+        <label for="meeting-name">Meeting Name:</label>
+        <input type="text" id="meeting-name" name="meeting-name" required>
+
+        <label for="meeting-description">Meeting Description:</label>
+        <textarea id="meeting-description" name="meeting-description" rows="3" required></textarea>
+
+        <label for="event-type">Type of event:</label>
+        <select id="event-type" name="event-type">
+            <option value="personal">Personal</option>
+            <option value="casual">Casual</option>
+            <option value="academic">Academic</option>
+        </select>
+
+        <label for="start-time">Start Time:</label>
+        <input type="datetime-local" id="start-time" name="start-time" required>
+
+        <label for="end-time">End Time:</label>
+        <input type="datetime-local" id="end-time" name="end-time" required>
+
+        <button type="submit" id="add-event">Add Event</button>
+    </div>
+
+</body>
+</html>

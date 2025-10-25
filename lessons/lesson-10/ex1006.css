@@ -1,0 +1,10 @@
+div {
+  border: 2px solid black;
+  padding: 15px;
+  width: 80%;
+}
+
+.royal-family {
+  width: 30%;
+  display: flex;
+}

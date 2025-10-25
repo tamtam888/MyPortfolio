@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ice Cream Order</title>
+</head>
+<body>
+
+<h1 id="pageTitle">Welcome to Tamar's Ice Cream Place</h1>
+<p>Online ice cream order</p>
+
+<label for="scoops">How many scoops:</label>
+<select id="scoops" name="scoops">
+    <option value="1">1 scoop</option>
+    <option value="2">2 scoops</option>
+    <option value="3">3 scoops</option>
+</select><br>
+
+<label>Choose flavors:</label><br>
+<input type="checkbox" id="vanilla" name="flavors[]" value="vanilla">
+<label for="vanilla">Vanilla</label><br>
+<input type="checkbox" id="chocolate" name="flavors[]" value="chocolate">
+<label for="chocolate">Chocolate</label><br>
+<input type="checkbox" id="strawberry" name="flavors[]" value="strawberry">
+<label for="strawberry">Strawberry</label><br>
+<input type="checkbox" id="mint" name="flavors[]" value="mint">
+<label for="mint">Mint</label><br>
+<input type="checkbox" id="cookie_dough" name="flavors[]" value="cookie_dough">
+<label for="cookie_dough">Cookie Dough</label><br><br>
+
+<label for="special_requests">Special requests:</label><br>
+<textarea id="special_requests" name="special_requests" rows="4" cols="30"></textarea> <br>
+
+<input type="checkbox" id="gift_wrap" name="gift_wrap" value="yes">
+<label for="gift_wrap">Wrap as a gift?</label><br><br>
+
+<label for="shipping_address">Shipping Address:</label>
+<input type="text" id="shipping_address" name="shipping_address" required>
+<br><br>
+
+<label for="shipping_time">Preferred Shipping Time:</label>
+<input type="time" id="shipping_time" name="shipping_time" required><br><br>
+
+<label for="credit_card">Credit Card Number:</label>
+<input type="number" id="credit_card" name="credit_card" required><br><br>
+
+<button type="button" onclick="onButtonClick()">Order</button>
+
+<script src="ex1206.js" defer></script>
+</body>
+</html>

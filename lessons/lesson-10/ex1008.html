@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="ex1008.css">
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <p>Please fill in your details:</p>
+  <form>
+    <!-- קבוצה 1: שדה שם -->
+    <div class="input-group">
+      <!-- כדי שסלקטור #yourName יעבוד, מוסיפים ID לתווית -->
+      <div class="label" id="yourName">Your Name:</div>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <br>
+    
+    <!-- קבוצה 2: שדה גיל -->
+    <div class="input-group">
+      <div class="label">Your Age:</div>
+      <input type="number" id="age" name="age" min="18">
+    </div>
+    <br>
+    
+    <!-- קבוצה 3: תיבת סימון עם תווית "Remember Account" -->
+    <div class="input-group">
+      <!-- תיבת הסימון מופיעה לפני התווית -->
+      <input type="checkbox" id="remember_yes" name="remember_account" value="yes">
+      <!-- שימוש בתגית label המקושרת לתיבת הסימון (באמצעות for) -->
+      <label for="remember_yes" class="remember">Remember Account</label>
+    </div>
+    <br>
+    
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

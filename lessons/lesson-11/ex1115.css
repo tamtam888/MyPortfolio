@@ -1,0 +1,48 @@
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .blue-square {
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+  }
+
+  .red-square {
+    width: 70px;
+    height: 70px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
+  .green-square {
+    width: 70px;
+    height: 70px;
+    border: 2px solid green;
+
+  }
+
+  .orange-square,
+  .black-square {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    display: flex;
+  }
+  
+  .orange-square {
+    border: 2px solid orange;
+  }
+  
+  .black-square {
+    border: 2px solid black;
+  }
+  

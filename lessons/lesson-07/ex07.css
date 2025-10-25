@@ -1,0 +1,20 @@
+.h1 {
+    font-size: 15px; 
+}
+
+.verse {
+    background-color: aquamarine; 
+    color: #f7be74; 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.chorus {
+    background-color: #eb3d66; 
+    color: #f7be74; 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.first-line {
+    color: #8e05c9; 
+}

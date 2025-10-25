@@ -1,0 +1,28 @@
+
+.container {
+    display: flex;
+    flex-flow: row;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.square {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#s1 {
+    border: 2px solid red;
+    flex: 40px;
+}
+#s2 {
+    border: 2px solid green;
+    flex: 100px;
+}
+#s3 {
+    border: 2px solid purple;
+    flex: 60px;
+}

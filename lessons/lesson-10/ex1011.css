@@ -1,0 +1,14 @@
+div {
+    border: 2px solid black;
+    padding: 15px;
+    width: 80%;
+  }
+  
+  #charles .grandchild,
+  #charles .great-grandchild {
+    border: 2px solid red;
+  }
+  #george ~ .great-grandchild {
+    background-color: gold;
+  }
+  

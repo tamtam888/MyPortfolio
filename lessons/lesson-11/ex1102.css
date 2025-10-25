@@ -1,0 +1,57 @@
+body {
+    background-color: beige;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.flag {
+    width: 300px;
+    height: 210px;
+    display: flex;
+    margin: 20px auto;
+    border: 1px solid black;
+}
+
+.france, .belgium, .ireland {
+    flex-direction: row;
+}
+
+.stripe {
+    flex: 1; /* כל רצועה תיקח חלק שווה ברוחב הדגל */
+    height: 100%; /* כל רצועה תמלא את הגובה של הדגל */
+}
+
+.blue {
+    background-color: blue;
+}
+
+.white {
+    background-color: white;
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red-belgium {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}

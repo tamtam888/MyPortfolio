@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 07 - Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        li {
+            margin: 10px 5px;
+            padding: 10px;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        li:hover {
+            background: #e6f7ff;
+        }
+        a {
+            text-decoration: none;
+            color: #007acc;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lesson 07 - Files</h1>
+    <p>Click on the links below to access the files:</p>
+
+    <ul>
+        <li><a href="ex07.html">ex07.html</a></li>
+        <li><a href="ex07.css">ex07.css</a></li>
+        <li><a href="ex0705.css">ex0705.css</a></li>
+        <li><a href="me.html">me.html</a></li>
+        <li><a href="me color.html">me color.html</a></li>
+        <li><a href="me-color.css">me-color.css</a></li>
+        <li><a href="me-color1.html">me-color1.html</a></li>
+    </ul>
+
+</body>
+</html>
