@@ -3,28 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tamar Karwan – Web Developer Portfolio</title>
+  <title>Tamar Karwan – Frontend Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero-section">
     <img src="images/me.jpg" alt="Tamar Karwan" class="profile-photo" />
+    
     <div class="hero-text">
       <h1>Tamar Karwan</h1>
-      <h2>Frontend Developer</h2>
-      <p>Building clean, interactive web experiences with React, JavaScript, and modern frontend tools.</p>
+      <h2>Frontend Developer | React & HealthTech</h2>
+      <p>
+        Frontend Developer with a unique background in Therapy. 
+        I combine technical skills in React and AI with a deep understanding of human needs, 
+        building accessible, user-centric web experiences.
+      </p>
+      
       <div class="social-links">
-        <a href="about.html" class="btn">About</a>
+        <a href="about.html" class="btn">About & Resume</a>
         <a href="projects.html" class="btn">Projects</a>
-        <a href="lessons/index.html" class="btn">Lessons</a>
-        <a href="https://www.linkedin.com/in/tamar-karwan-b4784b256" target="_blank" class="btn">LinkedIn</a>
-        <a href="https://github.com/tamtam888" target="_blank" class="btn">GitHub</a>
+        <a href="assets/tamar-karwan-cv-en.pdf" download class="btn">📄 CV (English)</a>
+        <a href="assets/tamar-karwan-cv-he.pdf" download class="btn">📄 קורות חיים</a>
+        <a href="https://www.linkedin.com/in/tamar-karwan-b4784b256" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+        <a href="https://github.com/tamtam888" target="_blank" rel="noopener" class="btn">GitHub</a>
+        <a href="mailto:tkarwan@gmail.com" class="btn btn-outline">Contact Me</a>
       </div>
     </div>
   </header>
 
   <footer>
-    <p>© 2025 Tamar Karwan • Built with 💜 using HTML, CSS & React</p>
+    <p>© <span id="year"></span> Tamar Karwan • Built with React & Empathy 💜</p>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

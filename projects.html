@@ -7,21 +7,61 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">My Projects</h1>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/tamtam888" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="container">
-    <h1>Projects</h1>
+    
+    <!-- MedicalCare Project -->
     <section class="project-card">
-      <img src="images/taskman.png" alt="TaskMan App" class="project-icon" />
+      <img src="images/medicalcare.png" alt="MedicalCare App" class="project-icon" onerror="this.style.display='none'" />
       <div>
-        <h2>TaskMan App</h2>
-        <p>A gamified task management app built with React, featuring animations, sounds, priority levels, and Google Calendar integration.</p>
+        <h2>MedicalCare - AI Health Log 🏥</h2>
+        <p class="project-meta">React · OpenAI API · Medplum (FHIR) · Voice Integration</p>
         <p>
-          <a href="https://taskman-yellow-user.vercel.app" target="_blank" class="btn">View Live</a>
-          <a href="https://github.com/tamtam888/TaskMan-Yellow-user" target="_blank" class="btn">GitHub Repo</a>
+          Voice-activated health log designed to make technology accessible for elderly populations.
+          Features AI-powered symptom analysis and secure FHIR-compliant data storage.
+        </p>
+        <p class="links">
+          <a href="https://github.com/tamtam888/MedicalCare" target="_blank" rel="noopener" class="btn">GitHub Repo</a>
         </p>
       </div>
     </section>
 
-    <a href="index.html" class="btn">⬅ Back to Home</a>
+    <!-- TaskMan Project -->
+    <section class="project-card">
+      <img src="images/taskman.png" alt="TaskMan App" class="project-icon" onerror="this.style.display='none'" />
+      <div>
+        <h2>TaskMan - Gamified Task Manager 📋</h2>
+        <p class="project-meta">React · Google Calendar API · Gamification</p>
+        <p>
+          A gamified task management app built with React, featuring animations, sounds, priority levels, 
+          and Google Calendar integration. Includes a points-based reward system to boost motivation.
+        </p>
+        <p class="links">
+          <a href="https://taskman-yellow-user.vercel.app" target="_blank" rel="noopener" class="btn">View Live</a>
+          <a href="https://github.com/tamtam888/TaskMan-Yellow-user" target="_blank" rel="noopener" class="btn">GitHub Repo</a>
+        </p>
+      </div>
+    </section>
+
+    <a href="index.html" class="btn btn-outline" style="margin-top: 20px;">← Back to Home</a>
   </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Tamar Karwan • Built with React & Empathy 💜</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

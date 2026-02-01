@@ -7,72 +7,137 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
-    <nav class="breadcrumbs"><a href="index.html">Home</a> › Resume</nav>
-
-    <h1>Tamar Karwan – Resume</h1>
-    <p>
-      Frontend developer (HTML, CSS, JavaScript, React) with strong self-learning, UX sensitivity, and clean code habits.
-      Background in client-facing roles; excellent communication and ownership across the delivery lifecycle.
-    </p>
-
-    <h3>Core Skills</h3>
-    <div class="cards">
-      <a class="card"><span class="card-title">Frontend</span><span class="card-sub">HTML5, CSS3, JS (ES6+), React</span></a>
-      <a class="card"><span class="card-title">Tooling</span><span class="card-sub">Git/GitHub, VS Code, Node</span></a>
-      <a class="card"><span class="card-title">Testing & Quality</span><span class="card-sub">a11y basics, Testing Library</span></a>
-      <a class="card"><span class="card-title">Data & Scripting</span><span class="card-sub">Python (basic), SQL (basic)</span></a>
-      <a class="card"><span class="card-title">DevOps</span><span class="card-sub">CI/CD, Vercel, Docker</span></a>
-      <a class="card"><span class="card-title">Design</span><span class="card-sub">Responsive UI, Figma</span></a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Resume</h1>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </nav>
     </div>
+  </header>
 
-    <h3>Projects</h3>
-    <ul class="meta-list">
-      <li><strong>TaskMan</strong> (React): components, filters, priorities, participants, deadlines; Google Sign-In, Calendar sync. 
-        <a class="link-inline" href="https://github.com/tamtam888/TaskMan-Yellow-user" target="_blank" rel="noopener">GitHub</a>
-      </li>
-      <li>Portfolio site: multi-page layout (Home, About, Projects, Lessons) with reusable UI patterns.</li>
-      <li>Practice apps (JS/DOM): lists, forms, events, basic data handling.</li>
-    </ul>
+  <main class="container">
+    
+    <section class="hero-section" style="margin-bottom: 40px;">
+      <img src="images/profile.jpg" alt="Tamar Karwan" class="profile-photo" />
+      <div class="hero-text">
+        <h1 style="margin-top: 0;">Tamar Karwan</h1>
+        <h2>Frontend Developer | React & HealthTech</h2>
+        <p>
+          Herzliya, Israel<br>
+          📧 tkarwan@gmail.com | 📱 +972-52-8988774<br>
+          <a href="https://github.com/tamtam888" target="_blank" rel="noopener" class="link-inline">GitHub</a> · 
+          <a href="https://www.linkedin.com/in/tamar-karwan-b4784b256" target="_blank" rel="noopener" class="link-inline">LinkedIn</a>
+        </p>
+      </div>
+    </section>
 
-    <h3>Experience</h3>
-    <ul class="meta-list">
-      <li>
-        <strong>Hydrotherapist & Rehabilitation Specialist — 2003–2024</strong><br />
-        Provided aquatic therapy treatments to individuals with physical and neurological conditions.<br />
-        Developed personalized rehabilitation programs combining movement, mindfulness, and empathy.<br />
-        Worked collaboratively with parents, caregivers, and multidisciplinary teams to support patient progress.<br />
-        Built long-term relationships, communication, and care coordination skills.
-      </li>
-      <li>
-        <strong>Client Services & Instruction — 2007–2024</strong><br />
-        Roles emphasizing guidance, empathy, and structured programs (private practice & education).<br />
-        Built discipline and communication skills.
-      </li>
-    </ul>
+    <section class="section">
+      <h3 class="section-title">Professional Summary</h3>
+      <p>
+        Frontend Developer with a unique background in Therapy. I combine technical skills in React and AI 
+        with a deep understanding of human needs. Highly autodidactic and motivated, with a proven ability 
+        to master new technologies independently while thriving in structured mentorship programs. Focused 
+        on clean code, automation, and "Empathy-Driven Development".
+      </p>
+    </section>
 
-    <h3>Education & Training</h3>
-    <ul class="meta-list">
-      <li><strong>SHE CODES</strong> — Web Development Track (HTML, CSS, JavaScript, React) · 2024–present</li>
-      <li>Self-learning: modern frontend, UI/UX best practices</li>
-    </ul>
+    <section class="section">
+      <h3 class="section-title">Technical Skills</h3>
+      <div class="cards">
+        <div class="card">
+          <span class="card-title">Frontend</span>
+          <span class="card-sub">React (Hooks, Context), JavaScript (ES6+), HTML5, CSS3, Tailwind, Responsive Design</span>
+        </div>
+        <div class="card">
+          <span class="card-title">AI & Automation</span>
+          <span class="card-sub">OpenAI API Integration, Make.com, n8n, Building AI Agents</span>
+        </div>
+        <div class="card">
+          <span class="card-title">Backend & Tools</span>
+          <span class="card-sub">Medplum (FHIR), REST APIs, Git & GitHub, VS Code, Postman</span>
+        </div>
+        <div class="card">
+          <span class="card-title">Deployment</span>
+          <span class="card-sub">Docker, Vercel, CI/CD basics</span>
+        </div>
+      </div>
+    </section>
 
-    <h3>Languages</h3>
-    <ul class="meta-list">
-      <li>Hebrew — Native</li>
-      <li>English — Fluent</li>
-    </ul>
+    <section class="section">
+      <h3 class="section-title">Featured Projects</h3>
+      
+      <div class="project-card">
+        <h4>MedicalCare - AI Health Log</h4>
+        <p class="project-meta">React, OpenAI, Medplum</p>
+        <p>Voice-activated health log designed to make technology accessible for elderly populations.</p>
+        <ul>
+          <li>Developed a React SPA with voice-to-text integration for easy symptom logging</li>
+          <li>Integrated OpenAI API to summarize daily health reports for caregivers</li>
+          <li>Implemented secure data storage using Medplum (FHIR standard) and complex scheduling logic</li>
+        </ul>
+        <a class="link-inline" href="https://github.com/tamtam888/MedicalCare" target="_blank" rel="noopener">View Code →</a>
+      </div>
 
-    <h3>Service</h3>
-    <ul class="meta-list">
-      <li><strong>IDF</strong>: Executive Assistant (Central Command) — coordination, schedules, and handling sensitive information.</li>
-    </ul>
+      <div class="project-card">
+        <h4>TaskMan</h4>
+        <p class="project-meta">React, Google API</p>
+        <p>Gamified task management application focusing on user motivation.</p>
+        <ul>
+          <li>Built a modular task system with filtering, priorities, and deadlines</li>
+          <li>Integrated Google Calendar API for real-time syncing and LocalStorage for persistence</li>
+        </ul>
+        <a class="link-inline" href="https://github.com/tamtam888/TaskMan-Yellow-user" target="_blank" rel="noopener">View Code →</a>
+      </div>
+    </section>
 
-    <p>
-      <a class="btn" href="assets/Tamar_Karwan_CV.pdf" download>📄 Download PDF</a>
-      <a class="btn" href="mailto:tkarwan@gmail.com">Contact</a>
-      <a class="btn" href="about.html">About</a>
-    </p>
+    <section class="section">
+      <h3 class="section-title">Experience</h3>
+      <div class="project-card">
+        <h4>Hydrotherapist & Rehabilitation Specialist</h4>
+        <p class="project-meta">2003 – 2024</p>
+        <ul class="meta-list">
+          <li>Managed long-term therapeutic processes for diverse populations, requiring high adaptability</li>
+          <li>Analyzed complex user (patient) needs to build personalized progress plans</li>
+          <li><strong>Relevance to Tech:</strong> Applying a "User-First" approach to build intuitive and accessible interfaces</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3 class="section-title">Education & Continuous Learning</h3>
+      <ul class="meta-list">
+        <li><strong>SHE CODES:</strong> Web Development Track (HTML, CSS, JS, React) | 2024 – Present</li>
+        <li><strong>Advanced AI & Automation Specialization:</strong>
+          <ul style="margin-top: 8px; padding-left: 20px;">
+            <li>Self-Paced & Mentored Learning: Deep dive into AI Agents, Make.com, and n8n workflows</li>
+            <li>Demonstrated high learning agility by bridging the gap between healthcare and tech independently</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3 class="section-title">Languages</h3>
+      <p>Hebrew (Native), English (Fluent)</p>
+    </section>
+
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #e8eafc; text-align: center;">
+      <a class="btn" href="assets/tamar-karwan-cv-en.pdf" download>📄 Download CV (English)</a>
+      <a class="btn" href="assets/tamar-karwan-cv-he.pdf" download>📄 הורדת קורות חיים (עברית)</a>
+      <a class="btn" href="mailto:tkarwan@gmail.com">📧 Contact Me</a>
+      <a class="btn btn-outline" href="index.html">← Back to Home</a>
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Tamar Karwan</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
