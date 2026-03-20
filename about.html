@@ -7,6 +7,120 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --purple: #4B0082; --purple-mid: #6A0DAD; --purple-light: #E8D5F5; --accent: #9B59B6; --bg: #F8F5FF; --card-bg: #FFFFFF; --text: #1a1a2e; --muted: #6b6b8a; --border: #E2D9F3; --tag-bg: #F0E8FB; --shadow: 0 4px 24px rgba(75,0,130,0.08); }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    nav { background: white; border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(75,0,130,0.06); }
+    .nav-brand { font-weight: 700; font-size: 1.1rem; color: var(--purple); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .container { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--purple); }
+    .hero { display: flex; align-items: center; gap: 2.5rem; background: white; border-radius: 20px; padding: 2.5rem; box-shadow: var(--shadow); border: 1px solid var(--border); margin-bottom: 2.5rem; }
+    .hero-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid var(--purple-light); flex-shrink: 0; }
+    .hero-text h1 { font-size: 1.9rem; font-weight: 800; color: var(--purple); letter-spacing: -0.03em; margin-bottom: 0.3rem; }
+    .hero-text h2 { font-size: 0.95rem; font-weight: 600; color: var(--muted); margin-bottom: 0.9rem; }
+    .hero-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; max-width: 520px; margin-bottom: 1.2rem; }
+    .hero-btns { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; padding: 0.5rem 1.1rem; border-radius: 8px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+    .btn-primary { background: var(--purple); color: white; }
+    .btn-primary:hover { background: var(--purple-mid); }
+    .btn-outline { color: var(--purple); border: 1.5px solid var(--border); background: transparent; }
+    .btn-outline:hover { border-color: var(--accent); background: var(--tag-bg); }
+    .section { background: white; border-radius: 16px; padding: 2rem; box-shadow: var(--shadow); border: 1px solid var(--border); margin-bottom: 1.5rem; }
+    .section h3 { font-size: 1rem; font-weight: 700; color: var(--purple); margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--purple-light); }
+    .section p, .section li { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.8rem; }
+    .skill-card { background: var(--tag-bg); border-radius: 10px; padding: 0.9rem 1rem; }
+    .skill-card strong { display: block; font-size: 0.82rem; color: var(--purple); font-weight: 700; margin-bottom: 0.4rem; }
+    .skill-card span { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+    .proj-item { padding: 1.1rem 0; border-bottom: 1px solid var(--border); }
+    .proj-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .proj-item h4 { font-size: 0.92rem; font-weight: 700; color: var(--text); margin-bottom: 0.2rem; }
+    .proj-item .tech { font-size: 0.78rem; color: var(--accent); font-weight: 500; margin-bottom: 0.4rem; }
+    .proj-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.5rem; }
+    .proj-item .links a { font-size: 0.82rem; color: var(--purple); text-decoration: none; font-weight: 600; margin-left: 1rem; }
+    .proj-item .links a:first-child { margin-left: 0; }
+    .proj-item .links a:hover { text-decoration: underline; }
+    .exp-item { padding: 0.8rem 0; }
+    .exp-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.3rem; }
+    .exp-row strong { font-size: 0.9rem; color: var(--text); font-weight: 700; }
+    .exp-row span { font-size: 0.8rem; color: var(--muted); }
+    footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--border); background: white; }
+    @media (max-width: 600px) { .hero { flex-direction: column; text-align: center; } .hero-btns { justify-content: center; } .container { padding: 2rem 1rem; } nav { padding: 0 1rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">Tamar Karwan</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="https://github.com/tamtam888" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <div class="hero">
+      <img src="images/profile_circle.png" alt="Tamar Karwan" class="hero-photo" />
+      <div class="hero-text">
+        <h1>Tamar Karwan</h1>
+        <h2>Frontend Developer · React &amp; JavaScript · HealthTech &amp; AI</h2>
+        <p>Frontend Developer with a unique background in Therapy. I combine React and JavaScript with AI, automation, and Vibe Coding tools to build accessible, human-centered products.</p>
+        <div class="hero-btns">
+          <a href="mailto:tkarwan@gmail.com" class="btn btn-primary">Email Me</a>
+          <a href="https://www.linkedin.com/in/tamar-karwan-b4784b256" target="_blank" class="btn btn-outline">LinkedIn</a>
+          <a href="https://github.com/tamtam888" target="_blank" class="btn btn-outline">GitHub</a>
+          <a href="assets/Tamar_Karwan_CV_2026.pdf" download class="btn btn-outline">📄 Download CV</a>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h3>Technical Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-card"><strong>Frontend</strong><span>React (Hooks, Context), JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Vite</span></div>
+        <div class="skill-card"><strong>AI &amp; Automation</strong><span>OpenAI API, Prompt Engineering, Make.com, n8n, AI Agents (Zebrapps.ai)</span></div>
+        <div class="skill-card"><strong>DevOps &amp; Tools</strong><span>Docker, GitHub Actions, CI/CD, Jest, Git, GitHub, Vercel, Postman</span></div>
+        <div class="skill-card"><strong>HealthTech</strong><span>Medplum (FHIR), Supabase, IndexedDB, MediaRecorder API, FullCalendar</span></div>
+        <div class="skill-card"><strong>Learning</strong><span>TypeScript (self-learning), Python basics (SHE CODES), Next.js 14, shadcn/ui</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <h3>Featured Projects</h3>
+      <div class="proj-item"><h4>TaskAi — Smart Task Manager SaaS</h4><div class="tech">Next.js 14 · TypeScript · Supabase · shadcn/ui · Vibe Coding</div><p>Hebrew RTL SaaS — Monday.com-inspired. Focus Mode, dashboard charts, Supabase Auth + RLS.</p><div class="links"><a href="https://task-pp656fwrf-tamar-karwans-projects.vercel.app/" target="_blank">▶ Live</a><a href="https://github.com/tamtam888/TaskAi" target="_blank">GitHub →</a></div></div>
+      <div class="proj-item"><h4>MaddCare — Clinic Management + Video Module</h4><div class="tech">React · Vite · FullCalendar · Medplum (FHIR) · MediaRecorder API · Vibe Coding</div><p>Full clinic SPA: drag-and-drop calendar, FHIR sync + video session recording with side-by-side comparison.</p><div class="links"><a href="https://medical-care-mu.vercel.app" target="_blank">▶ Clinic</a><a href="https://maddvideo.vercel.app" target="_blank">▶ Video</a><a href="https://github.com/tamtam888/MaddCare" target="_blank">GitHub →</a></div></div>
+      <div class="proj-item"><h4>VIBE Music — AI-Powered Music Player</h4><div class="tech">React 18 · TypeScript · Supabase · Replicate AI · PWA · Vibe Coding</div><p>AI Radio engine sequences tracks by BPM, energy &amp; mood. Spotify import, cloud sync, PWA, Hebrew/English RTL.</p><div class="links"><a href="https://vibe-music-app-phi.vercel.app" target="_blank">▶ Live</a><a href="https://github.com/tamtam888/vibe-music-app" target="_blank">GitHub →</a></div></div>
+      <div class="proj-item"><h4>Job Interview Simulator · TaskMan — CI/CD &amp; Gamification</h4><div class="tech">React · TypeScript · Docker · GitHub Actions · CI/CD · Vibe Coding</div><p>AI interview simulator with role-specific questions. TaskMan: Game Mode + full CI/CD, Docker, Jest tests.</p><div class="links"><a href="https://taskman-yellow-user.vercel.app" target="_blank">▶ TaskMan</a><a href="https://github.com/tamtam888" target="_blank">GitHub →</a></div></div>
+    </div>
+    <div class="section">
+      <h3>Experience</h3>
+      <div class="exp-item"><div class="exp-row"><strong>Hydrotherapist &amp; Rehabilitation Specialist</strong><span>2003 – 2024</span></div><p>Translated complex human needs into structured treatment plans — user-first thinking applied to product development. Strong analytical problem-solving in real-world environments.</p></div>
+    </div>
+    <div class="section">
+      <h3>Education &amp; Learning</h3>
+      <div class="exp-item"><div class="exp-row"><strong>SHE CODES — Full-Stack Web Development</strong><span>2024 – Present</span></div><p>HTML, CSS, JavaScript, React, Python basics · Team projects &amp; real-world applications</p></div>
+      <div class="exp-item"><div class="exp-row"><strong>AI Courses — Zebrapps.ai</strong><span>2024 – Present</span></div><p>Private AI courses: agents, prompt engineering, LLM integrations, automation workflows</p></div>
+      <div class="exp-item"><div class="exp-row"><strong>Self-Directed Learning — TypeScript &amp; Automation</strong><span>2024 – Present</span></div><p>TypeScript, Make.com, n8n, Vibe Coding (Claude Code, Lovable, Cursor, v0.dev)</p></div>
+    </div>
+    <div class="section">
+      <h3>Languages</h3>
+      <p>Hebrew — Native &nbsp;·&nbsp; English — High Level (professional reading, writing &amp; communication)</p>
+    </div>
+  </div>
+  <footer>© <span id="year"></span> Tamar Karwan · Built with React &amp; Empathy 💜</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Tamar Karwan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --purple: #4B0082; --purple-mid: #6A0DAD; --purple-light: #E8D5F5; --accent: #9B59B6;
       --bg: #F8F5FF; --card-bg: #FFFFFF; --text: #1a1a2e; --muted: #6b6b8a;
