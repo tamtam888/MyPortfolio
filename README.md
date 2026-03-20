@@ -6,11 +6,13 @@
 
 🔗 **[View Live Portfolio](https://tamtam888.github.io/MyPortfolio/)** | [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) | [GitHub](https://github.com/tamtam888)
 
+---
 
 ## About
 
 Frontend Developer with a unique background in Therapy. I combine React, JavaScript, and AI with a deep understanding of human needs — building accessible, user-centric products. I leverage Vibe Coding tools (Claude Code, Lovable, Cursor) to rapidly ship full-featured applications.
 
+---
 
 ## 📦 Featured Projects
 
@@ -39,14 +41,19 @@ Retro productivity app with Game Mode, Google OAuth2, Docker, CI/CD, Jest.
 - **Live:** https://taskman-yellow-user.vercel.app
 - **Repo:** https://github.com/tamtam888/TaskMan
 
+---
+
 ## 🛠 Tech Stack
 
+```
 Frontend:    React.js | JavaScript (ES6+) | HTML5 | CSS3 | Tailwind CSS | Vite
 AI & Tools:  OpenAI API | Prompt Engineering | Make.com | n8n | Vibe Coding
 DevOps:      Docker | GitHub Actions | CI/CD | Jest | Git | Vercel
 HealthTech:  Medplum (FHIR) | Supabase | IndexedDB | MediaRecorder API
 Learning:    TypeScript (self-learning) | Next.js 14 | Python (basics)
+```
 
+---
 
 ## 📁 Portfolio Structure
 
@@ -58,7 +65,9 @@ MyPortfolio/
 ├── style.css         # Global styles
 ├── images/           # Profile photos
 └── assets/           # CV downloads
+```
 
+---
 
 ## 📧 Contact
 
@@ -66,4 +75,6 @@ MyPortfolio/
 - **LinkedIn:** [linkedin.com/in/tamar-karwan-b4784b256](https://linkedin.com/in/tamar-karwan-b4784b256)
 - **GitHub:** [github.com/tamtam888](https://github.com/tamtam888)
 
-  <footer>© <span id="year"></span> Tamar Karwan · Built with React &amp; Empathy 💜</footer>
+---
+
+*Built with React & Empathy 💜*
