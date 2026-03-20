@@ -2,6 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Tamar Karwan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --purple: #4B0082; --purple-mid: #6A0DAD; --purple-light: #E8D5F5; --accent: #9B59B6;
+      --bg: #F8F5FF; --card-bg: #FFFFFF; --text: #1a1a2e; --muted: #6b6b8a;
+      --border: #E2D9F3; --tag-bg: #F0E8FB; --tag-color: #5C2D91;
+      --shadow: 0 4px 24px rgba(75,0,130,0.08); --shadow-hover: 0 8px 40px rgba(75,0,130,0.16);
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    nav { background: white; border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(75,0,130,0.06); }
+    .nav-brand { font-weight: 700; font-size: 1.1rem; color: var(--purple); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .hero { text-align: center; padding: 4rem 2rem 2.5rem; max-width: 700px; margin: 0 auto; }
+    .hero-eyebrow { display: inline-block; background: var(--purple-light); color: var(--purple-mid); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 100px; margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: var(--purple); line-height: 1.15; margin-bottom: 1rem; letter-spacing: -0.03em; }
+    .hero p { font-size: 1.05rem; color: var(--muted); line-height: 1.7; max-width: 560px; margin: 0 auto; }
+    .filters { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; padding: 0 2rem 2.5rem; }
+    .filter-btn { padding: 0.45rem 1.1rem; border-radius: 100px; border: 1.5px solid var(--border); background: white; color: var(--muted); font-size: 0.82rem; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .filter-btn.active { background: var(--purple); border-color: var(--purple); color: white; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.8rem; max-width: 1100px; margin: 0 auto; padding: 0 2rem 5rem; }
+    .card { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .card-header { padding: 1.6rem 1.6rem 0; display: flex; align-items: flex-start; gap: 1rem; }
+    .card-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+    .card-meta { flex: 1; }
+    .card-title { font-size: 1.12rem; font-weight: 700; color: var(--text); margin-bottom: 0.2rem; line-height: 1.3; }
+    .card-subtitle { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+    .badge-vibe { display: inline-flex; align-items: center; gap: 0.3rem; background: linear-gradient(135deg, #FF6B9D, #C44BFF); color: white; font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.65rem; border-radius: 100px; margin-top: 0.35rem; letter-spacing: 0.02em; }
+    .badge-full { display: inline-flex; align-items: center; gap: 0.3rem; background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.65rem; border-radius: 100px; margin-top: 0.35rem; letter-spacing: 0.02em; }
+    .card-body { padding: 1.2rem 1.6rem; flex: 1; }
+    .card-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
+    .highlights { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1.1rem; }
+    .highlights li { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.82rem; color: var(--text); line-height: 1.4; }
+    .highlights li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0; }
+    .tag { background: var(--tag-bg); color: var(--tag-color); font-size: 0.75rem; font-weight: 500; padding: 0.3rem 0.7rem; border-radius: 6px; }
+    .card-footer { padding: 1rem 1.6rem 1.6rem; display: flex; gap: 0.7rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1.1rem; border-radius: 8px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; font-family: inherit; }
+    .btn-primary { background: var(--purple); color: white; }
+    .btn-primary:hover { background: var(--purple-mid); }
+    .btn-outline { background: transparent; color: var(--purple); border: 1.5px solid var(--border); }
+    .btn-outline:hover { border-color: var(--accent); background: var(--tag-bg); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0; margin: 0 2rem 1rem; color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; max-width: 1100px; }
+    .back-link:hover { color: var(--purple); }
+    footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--border); background: white; }
+    @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; padding: 0 1rem 4rem; } .hero { padding: 2.5rem 1rem 1.5rem; } nav { padding: 0 1rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">Tamar Karwan</a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="https://github.com/tamtam888" target="_blank">GitHub</a></li></ul>
+  </nav>
+  <div style="max-width:1100px; margin: 0 auto;"><a href="index.html" class="back-link">← Back to Home</a></div>
+  <div class="hero">
+    <span class="hero-eyebrow">Portfolio</span>
+    <h1>My Projects</h1>
+    <p>A selection of apps I've built — combining React, AI, and a background in therapy to create thoughtful, human-centered products.</p>
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterCards('all', this)">All Projects</button>
+    <button class="filter-btn" onclick="filterCards('healthtech', this)">HealthTech</button>
+    <button class="filter-btn" onclick="filterCards('productivity', this)">Productivity</button>
+    <button class="filter-btn" onclick="filterCards('music', this)">Music</button>
+    <button class="filter-btn" onclick="filterCards('ai', this)">AI-Powered</button>
+  </div>
+  <div class="projects-grid">
+
+    <div class="card" data-category="productivity">
+      <div class="card-header"><div class="card-icon" style="background:#FFF3E0;">🕹️</div><div class="card-meta"><div class="card-title">TaskMan</div><div class="card-subtitle">Gamified Task Manager</div><span class="badge-full">⚙️ Full-Stack · CI/CD</span></div></div>
+      <div class="card-body"><p class="card-desc">A retro-inspired productivity app that turns task management into a game. Built with full engineering best practices including Docker, CI/CD pipelines, and automated testing.</p><ul class="highlights"><li>Game Mode with score, levels &amp; sound effects</li><li>Google OAuth2 authentication — per-user data</li><li>Priority levels, categories &amp; due date tracking</li><li>Tests with Jest + React Testing Library in CI</li><li>Dockerized and deployed via GitHub Actions</li></ul><div class="tags"><span class="tag">React</span><span class="tag">Google OAuth2</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Jest</span><span class="tag">CI/CD</span></div></div>
+      <div class="card-footer"><a href="https://taskman-yellow-user.vercel.app" target="_blank" class="btn btn-primary">▶ View Live</a><a href="https://github.com/tamtam888/TaskMan" target="_blank" class="btn btn-outline">GitHub Repo</a></div>
+    </div>
+
+    <div class="card" data-category="productivity ai">
+      <div class="card-header"><div class="card-icon" style="background:#E8EAF6;">🧠</div><div class="card-meta"><div class="card-title">TaskAi</div><div class="card-subtitle">Smart Task Manager SaaS</div><span class="badge-vibe">✨ Vibe Coding</span></div></div>
+      <div class="card-body"><p class="card-desc">A production-quality Hebrew RTL task management SaaS — Monday.com-inspired, without the complexity. Built with Next.js 14 App Router, Supabase auth, and full Row Level Security.</p><ul class="highlights"><li>Monday-style table with inline editing &amp; smart sorting</li><li>Focus Mode: top 3 priority tasks, live-updating</li><li>Dashboard with charts — completion %, overdue, priority</li><li>Full Hebrew RTL, responsive (mobile cards → desktop table)</li><li>Supabase auth + RLS — every user sees only their data</li></ul><div class="tags"><span class="tag">Next.js 14</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">Tailwind CSS</span><span class="tag">shadcn/ui</span><span class="tag">TanStack Table</span><span class="tag">Recharts</span></div></div>
+      <div class="card-footer"><a href="https://github.com/tamtam888/TaskAi" target="_blank" class="btn btn-primary">GitHub Repo</a></div>
+    </div>
+
+    <div class="card" data-category="healthtech ai">
+      <div class="card-header"><div class="card-icon" style="background:#E8F5E9;">🏥</div><div class="card-meta"><div class="card-title">MaddCare</div><div class="card-subtitle">Clinic Management Platform</div><span class="badge-full">⚙️ Full-Stack · FHIR</span></div></div>
+      <div class="card-body"><p class="card-desc">A full clinic management system for therapists — featuring patient records, a drag-and-drop appointments calendar, role-based access, and Medplum (FHIR) integration.</p><ul class="highlights"><li>Weekly/monthly calendar with drag &amp; drop scheduling</li><li>Conflict prevention and same-day booking warnings</li><li>Role-based views: Admin sees all, Therapist sees own</li><li>Real-time in-app notification system</li><li>Medplum FHIR sync for healthcare data compliance</li></ul><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">FullCalendar</span><span class="tag">Medplum (FHIR)</span><span class="tag">Vitest</span><span class="tag">IndexedDB</span></div></div>
+      <div class="card-footer"><a href="https://medical-care-mu.vercel.app" target="_blank" class="btn btn-primary">▶ View Live</a><a href="https://github.com/tamtam888/MaddCare" target="_blank" class="btn btn-outline">GitHub Repo</a></div>
+    </div>
+
+    <div class="card" data-category="healthtech">
+      <div class="card-header"><div class="card-icon" style="background:#E3F2FD;">🎥</div><div class="card-meta"><div class="card-title">MaddCare Video</div><div class="card-subtitle">Clinic Video Session Module</div><span class="badge-vibe">✨ Vibe Coding</span></div></div>
+      <div class="card-body"><p class="card-desc">A standalone video session module for MaddCare, built with Vibe Coding. Enables clinicians to record, review, and compare patient video sessions — all stored offline in the browser.</p><ul class="highlights"><li>Video recording via browser MediaRecorder API</li><li>Offline-first architecture with IndexedDB storage</li><li>Session timeline markers &amp; clinical tags</li><li>Side-by-side session comparison with sync playback</li><li>Patient lookup, intake flow, and session history</li></ul><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">MediaRecorder API</span><span class="tag">IndexedDB</span><span class="tag">Vibe Coding</span></div></div>
+      <div class="card-footer"><a href="https://maddvideo.vercel.app" target="_blank" class="btn btn-primary">▶ View Live</a><a href="https://github.com/tamtam888/Maddvideo" target="_blank" class="btn btn-outline">GitHub Repo</a></div>
+    </div>
+
+    <div class="card" data-category="music ai">
+      <div class="card-header"><div class="card-icon" style="background:#F3E5F5;">🎵</div><div class="card-meta"><div class="card-title">VIBE Music</div><div class="card-subtitle">AI-Powered Music Player</div><span class="badge-vibe">✨ Vibe Coding</span></div></div>
+      <div class="card-body"><p class="card-desc">A full-featured music app built with Vibe Coding — featuring an AI engine that sequences tracks by energy, BPM, and mood for seamless transitions. Cloud-synced, PWA-installable, and fully bilingual.</p><ul class="highlights"><li>AI Radio: auto-sequencing by mood, energy &amp; BPM</li><li>AI track generation via Replicate MusicGen</li><li>Spotify import, BPM scanner, and shareable mixes</li><li>Supabase cloud sync with Row Level Security</li><li>PWA installable · Hebrew/English bilingual · Dark mode</li></ul><div class="tags"><span class="tag">React 18</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">Tailwind CSS</span><span class="tag">Replicate AI</span><span class="tag">PWA</span></div></div>
+      <div class="card-footer"><a href="https://vibe-music-app-phi.vercel.app" target="_blank" class="btn btn-primary">▶ View Live</a><a href="https://github.com/tamtam888/vibe-music-app" target="_blank" class="btn btn-outline">GitHub Repo</a></div>
+    </div>
+
+    <div class="card" data-category="productivity ai">
+      <div class="card-header"><div class="card-icon" style="background:#FFF8E1;">💼</div><div class="card-meta"><div class="card-title">Job Interview Simulator</div><div class="card-subtitle">AI-Powered Interview Prep</div><span class="badge-vibe">✨ Vibe Coding</span></div></div>
+      <div class="card-body"><p class="card-desc">An interactive interview practice tool built with Vibe Coding. Simulates real job interviews using AI-generated questions tailored to specific roles — helping candidates prepare with confidence.</p><ul class="highlights"><li>Role-specific AI question generation</li><li>Real-time answer feedback and scoring</li><li>Built with React, TypeScript, and shadcn/ui</li><li>Clean, distraction-free interview experience</li></ul><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">shadcn/ui</span><span class="tag">Tailwind CSS</span><span class="tag">AI</span></div></div>
+      <div class="card-footer"><a href="https://github.com/tamtam888/job-hunt-hub" target="_blank" class="btn btn-primary">GitHub Repo</a></div>
+    </div>
+
+  </div>
+  <footer>© 2026 Tamar Karwan &nbsp;·&nbsp; Built with React &amp; Empathy 💜</footer>
+  <script>function filterCards(category, btn) { document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); document.querySelectorAll('.card').forEach(card => { const cats = card.dataset.category || ''; card.style.display = (category === 'all' || cats.includes(category)) ? '' : 'none'; }); }</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects – Tamar Karwan</title>
   <link rel="stylesheet" href="style.css" />
