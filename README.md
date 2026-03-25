@@ -2,7 +2,7 @@
 
 **Frontend Developer | React & JavaScript | HealthTech & AI**
 
-> Building thoughtful, human-centered web experiences that combine technical depth with empathy.
+> Building thoughtful, human-centered web applications that combine technical depth with real-world impact.
 
 🔗 **[View Live Portfolio](https://tamtam888.github.io/MyPortfolio/)** | [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) | [GitHub](https://github.com/tamtam888)
 
@@ -10,34 +10,49 @@
 
 ## About
 
-Frontend Developer with a unique background in Therapy. I combine React, JavaScript, and AI with a deep understanding of human needs — building accessible, user-centric products. I leverage Vibe Coding tools (Claude Code, Lovable, Cursor) to rapidly ship full-featured applications.
+Frontend Developer with a unique background in Therapy. I combine React, JavaScript, and AI with a deep understanding of human needs — building accessible, user-centric products.
+
+I leverage modern AI-driven development tools (Claude Code, Cursor, Lovable) to rapidly design, build, and iterate on full-featured applications.
 
 ---
 
 ## 📦 Featured Projects
 
-### 🧠 TaskAi — Smart Task Manager SaaS
-Hebrew RTL SaaS inspired by Monday.com. Next.js 14, Supabase Auth + RLS, Focus Mode, dashboard charts.
-- **Live:** https://task-pp656fwrf-tamar-karwans-projects.vercel.app/
-- **Repo:** https://github.com/tamtam888/TaskAi
-
-### 🏥 MaddCare — Clinic Management Platform + Video Module
-Full clinic SPA with drag-and-drop calendar, FHIR compliance, and video session recording/comparison.
+### 🏥 MedicalCare — AI-Assisted Patient Management System
+A healthcare platform for managing patients, clinical history, reports, and treatment workflows in one unified system.  
+Built with AI-assisted workflows, offline-first architecture, and a strong focus on secure handling of sensitive medical data.
 - **Clinic App:** https://medical-care-mu.vercel.app
 - **Video Module:** https://maddvideo.vercel.app
 - **Repo:** https://github.com/tamtam888/MaddCare
 
-### 🎵 VIBE Music — AI-Powered Music Player
-AI Radio engine sequences tracks by BPM, energy & mood. PWA, Supabase cloud, bilingual Hebrew/English.
+---
+
+### 🧠 TaskAi — Smart Task Management SaaS
+A Hebrew RTL SaaS platform inspired by Monday.com, featuring task management, dashboards, and focus tools.  
+Built with Next.js 14, Supabase Auth with RLS, and a clean, scalable product architecture.
+- **Live:** https://task-pp656fwrf-tamar-karwans-projects.vercel.app/
+- **Repo:** https://github.com/tamtam888/TaskAi
+
+---
+
+### 🎵 VIBE Music — AI-Powered Mood-Based Music Experience
+A music application that organizes listening by mood, energy, and flow instead of traditional playlists.  
+Includes AI-driven sequencing logic, PWA support, and bilingual Hebrew/English UX.
 - **Live:** https://vibe-music-app-phi.vercel.app
 - **Repo:** https://github.com/tamtam888/vibe-music-app
 
-### 💼 Job Interview Simulator — AI Interview Prep
-Role-specific AI question generation with real-time feedback. Built with Vibe Coding.
+---
+
+### 💼 Job Interview Simulator — AI Interview Practice Platform
+An AI-powered interview preparation tool with role-based questions and structured feedback.  
+Designed to simulate real interview scenarios and improve confidence through guided practice.
 - **Repo:** https://github.com/tamtam888/job-hunt-hub
 
-### 🕹️ TaskMan — Gamified Task Manager
-Retro productivity app with Game Mode, Google OAuth2, Docker, CI/CD, Jest.
+---
+
+### 🕹️ TaskMan — Gamified Productivity App
+A retro-inspired task manager that turns productivity into a game experience.  
+Includes Google OAuth, CI/CD pipelines, and a modular React architecture.
 - **Live:** https://taskman-yellow-user.vercel.app
 - **Repo:** https://github.com/tamtam888/TaskMan
 
@@ -45,35 +60,35 @@ Retro productivity app with Game Mode, Google OAuth2, Docker, CI/CD, Jest.
 
 ## 🛠 Tech Stack
 
-```
-Frontend:    React.js | JavaScript (ES6+) | HTML5 | CSS3 | Tailwind CSS | Vite
-AI & Tools:  OpenAI API | Prompt Engineering | Make.com | n8n | Vibe Coding
-DevOps:      Docker | GitHub Actions | CI/CD | Jest | Git | Vercel
-HealthTech:  Medplum (FHIR) | Supabase | IndexedDB | MediaRecorder API
-Learning:    TypeScript (self-learning) | Next.js 14 | Python (basics)
-```
+
+Frontend: React.js | JavaScript (ES6+) | HTML5 | CSS3 | Tailwind CSS | Vite
+AI & Tools: OpenAI API | Prompt Engineering | Make.com | n8n | AI-assisted development
+DevOps: Docker | GitHub Actions | CI/CD | Jest | Git | Vercel
+HealthTech: Medplum (FHIR) | Supabase | IndexedDB | Media APIs
+Learning: TypeScript (self-learning) | Next.js 14 | Python (basics)
+
 
 ---
 
 ## 📁 Portfolio Structure
 
-```
+
 MyPortfolio/
-├── index.html        # Home / Landing page
-├── about.html        # About, skills, projects, experience
-├── projects.html     # Projects showcase with filters
-├── style.css         # Global styles
-├── images/           # Profile photos
-└── assets/           # CV downloads
-```
+├── index.html # Home / Landing page
+├── about.html # About, skills, projects, experience
+├── projects.html # Projects showcase
+├── style.css # Global styles
+├── images/ # Assets and previews
+└── assets/ # CV downloads
+
 
 ---
 
 ## 📧 Contact
 
-- **Email:** tkarwan@gmail.com
-- **LinkedIn:** [linkedin.com/in/tamar-karwan-b4784b256](https://linkedin.com/in/tamar-karwan-b4784b256)
-- **GitHub:** [github.com/tamtam888](https://github.com/tamtam888)
+- **Email:** tkarwan@gmail.com  
+- **LinkedIn:** https://linkedin.com/in/tamar-karwan-b4784b256  
+- **GitHub:** https://github.com/tamtam888  
 
 ---
 
