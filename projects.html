@@ -21,22 +21,22 @@
   <div class="container">
     <a href="index.html" class="back-link">← Back to Home</a>
 
-    <div class="hero hero-projects">
+    <section class="hero hero-projects">
       <div class="hero-text hero-text-center">
         <span class="eyebrow">Portfolio</span>
         <h1>Selected Projects</h1>
         <p>
-          Product-focused applications built with React, JavaScript, AI-assisted workflows,
-          and a strong emphasis on real-world usability.
+          Frontend and product-focused applications built with React, JavaScript, and
+          AI-assisted workflows, with an emphasis on real-world usability and system thinking.
         </p>
       </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
       <h3>Featured Projects</h3>
 
       <div class="projects-grid featured-grid">
-        <div class="project-card featured-card">
+        <article class="project-card featured-card">
           <div class="project-image-wrap">
             <img src="images/medicalcare-cover.png" alt="MedicalCare preview" class="project-image" />
             <span class="status-badge live">Live</span>
@@ -46,13 +46,21 @@
             <h4>MedicalCare</h4>
             <div class="tech">Clinical management platform with AI-assisted workflows</div>
             <p>
-              Patient and treatment management platform designed for structured clinical workflows, AI-assisted documentation, and privacy-conscious handling of sensitive data.
+              A full-scale healthcare management platform for therapists, combining patient records,
+              treatment workflows, care plans, documentation, and AI-assisted reporting in one structured system.
+            </p>
+
+            <p>
+              Built with a strong focus on privacy-conscious handling of sensitive data, including
+              de-identified outputs for AI-generated reports and summaries.
             </p>
 
             <div class="project-tags">
-              <span>HealthTech</span>
-              <span>AI Workflow</span>
-              <span>Privacy-Conscious</span>
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>Medplum (FHIR)</span>
+              <span>IndexedDB</span>
+              <span>AI-assisted development</span>
             </div>
 
             <div class="links">
@@ -60,9 +68,9 @@
               <a href="https://github.com/tamtam888/MaddCare" target="_blank" rel="noopener">GitHub →</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card featured-card">
+        <article class="project-card featured-card">
           <div class="project-image-wrap placeholder-wrap">
             <div class="placeholder-box">
               <span class="placeholder-icon">💼</span>
@@ -75,22 +83,24 @@
             <h4>Job Interview Simulator</h4>
             <div class="tech">AI interview practice and feedback tool</div>
             <p>
-              Interactive interview preparation tool with role-based prompts, guided feedback, and a product-focused training experience.
+              Interactive interview preparation product with role-based prompts, guided feedback,
+              and a product-focused training experience.
             </p>
 
             <div class="project-tags">
-              <span>AI</span>
               <span>React</span>
-              <span>Interview Prep</span>
+              <span>TypeScript</span>
+              <span>AI workflows</span>
+              <span>Product UX</span>
             </div>
 
             <div class="links">
               <a href="https://github.com/tamtam888/job-hunt-hub" target="_blank" rel="noopener">GitHub →</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card featured-card">
+        <article class="project-card featured-card">
           <div class="project-image-wrap">
             <img src="images/vibe-music-cover.png" alt="VIBE Music preview" class="project-image" />
             <span class="status-badge live">Live</span>
@@ -100,13 +110,16 @@
             <h4>VIBE Music</h4>
             <div class="tech">Mood-first music player with AI-assisted logic</div>
             <p>
-              Music experience organized around mood, vibe, and flow instead of traditional playlists, with a distinctive bilingual interface and polished product identity.
+              Music experience organized around mood, vibe, and flow instead of traditional playlists,
+              with bilingual UI and a distinct product identity.
             </p>
 
             <div class="project-tags">
-              <span>Music</span>
-              <span>AI</span>
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Supabase</span>
               <span>PWA</span>
+              <span>AI-assisted development</span>
             </div>
 
             <div class="links">
@@ -114,15 +127,15 @@
               <a href="https://github.com/tamtam888/vibe-music-app" target="_blank" rel="noopener">GitHub →</a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
       <h3>Additional Projects</h3>
 
       <div class="projects-grid secondary-grid">
-        <div class="project-card compact-card">
+        <article class="project-card compact-card">
           <div class="project-image-wrap compact-image-wrap">
             <img src="images/taskai-cover.png" alt="TaskAi preview" class="project-image" />
           </div>
@@ -131,17 +144,25 @@
             <h4>TaskAi</h4>
             <div class="tech">Hebrew RTL task management SaaS</div>
             <p>
-              Smart task management product with structured workflows, filtering, dashboards, and secure per-user data access.
+              Smart task management product with structured workflows, filtering, dashboards,
+              and secure per-user data access.
             </p>
+
+            <div class="project-tags">
+              <span>Next.js 14</span>
+              <span>TypeScript</span>
+              <span>Supabase</span>
+              <span>RTL</span>
+            </div>
 
             <div class="links">
               <a href="https://task-pp656fwrf-tamar-karwans-projects.vercel.app/" target="_blank" rel="noopener">▶ Live</a>
               <a href="https://github.com/tamtam888/TaskAi" target="_blank" rel="noopener">GitHub →</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card compact-card">
+        <article class="project-card compact-card">
           <div class="project-image-wrap compact-image-wrap">
             <img src="images/taskman-cover.png" alt="TaskMan preview" class="project-image" />
           </div>
@@ -150,17 +171,25 @@
             <h4>TaskMan</h4>
             <div class="tech">Gamified productivity app</div>
             <p>
-              Retro-inspired task management experience combining productivity, deadlines, priorities, and playful engagement mechanics.
+              Retro-inspired task management experience combining productivity, priorities,
+              deadlines, and playful engagement mechanics.
             </p>
+
+            <div class="project-tags">
+              <span>React</span>
+              <span>Gamification</span>
+              <span>Google OAuth</span>
+              <span>CI/CD</span>
+            </div>
 
             <div class="links">
               <a href="https://taskman-yellow-user.vercel.app" target="_blank" rel="noopener">▶ Live</a>
               <a href="https://github.com/tamtam888/TaskMan" target="_blank" rel="noopener">GitHub →</a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   </div>
 
   <footer>
