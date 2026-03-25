@@ -103,8 +103,8 @@ nav {
 }
 
 .hero-photo {
-  width: 88px;
-  height: 88px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--purple-light);
@@ -338,8 +338,8 @@ footer {
   }
 
   .hero-photo {
-    width: 78px;
-    height: 78px;
+    width: 130px;
+    height: 130px;
   }
 
   .nav-links {
