@@ -283,6 +283,15 @@ nav {
   margin-bottom: 0.7rem;
 }
 
+.ai-features {
+  margin: 0 0 1rem 1rem;
+  padding-left: 0;
+}
+
+.ai-features li {
+  margin-bottom: 0.18rem;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
