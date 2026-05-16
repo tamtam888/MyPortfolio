@@ -141,17 +141,20 @@ body {
   padding: 10px 20px;
   margin: 5px;
   text-decoration: none;
-  color: #fff;
-  background: var(--accent);
+  color: var(--accent);
+  background: transparent;
   border-radius: 6px;
   font-weight: 600;
   transition: all 0.3s ease;
   border: 2px solid var(--accent);
 }
 
-.btn:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+.btn:hover,
+.btn:focus-visible,
+.btn:active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(74, 20, 140, 0.3);
 }
@@ -161,9 +164,11 @@ body {
   color: var(--accent);
 }
 
-.btn-outline:hover {
+.btn-outline:hover,
+.btn-outline:focus-visible,
+.btn-outline:active {
   background: var(--accent);
-  color: white;
+  color: #fff;
 }
 
 .links {
