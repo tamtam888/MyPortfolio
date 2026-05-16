@@ -1,95 +1,94 @@
-# 💼 Tamar Karwan — Portfolio
+# Tamar Karwan - Portfolio
 
-**Frontend Developer | React & JavaScript | HealthTech & AI**
+**Frontend Developer | React & JavaScript | HealthTech & AI-powered web applications**
 
-> Building thoughtful, human-centered web applications that combine technical depth with real-world impact.
+I build practical, human-centered web applications with clean frontend architecture, real user workflows, responsive UX, and secure data handling.
 
-🔗 **[View Live Portfolio](https://tamtam888.github.io/MyPortfolio/)** | [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) | [GitHub](https://github.com/tamtam888)
+[Live Portfolio](https://tamtam888.github.io/MyPortfolio/) | [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) | [GitHub](https://github.com/tamtam888)
 
 ---
 
 ## About
 
-Frontend Developer with a unique background in Therapy. I combine React, JavaScript, and AI with a deep understanding of human needs — building accessible, user-centric products.
+Frontend developer with a unique background in therapy and human-centered work. I combine React, JavaScript, product thinking, and AI-assisted workflows to build tools that solve real user problems.
 
-I leverage modern AI-driven development tools (Claude Code, Cursor, Lovable) to rapidly design, build, and iterate on full-featured applications.
-
----
-
-## 📦 Featured Projects
-
-### 🏥 MedicalCare — AI-Assisted Patient Management System
-A healthcare platform for managing patients, clinical history, reports, and treatment workflows in one unified system.  
-Built with AI-assisted workflows, offline-first architecture, and a strong focus on secure handling of sensitive medical data.
-- **Clinic App:** https://medical-care-mu.vercel.app
-- **Video Module:** https://maddvideo.vercel.app
-- **Repo:** https://github.com/tamtam888/MaddCare
+My main focus is building practical frontend products in HealthTech, productivity, and AI-supported user experiences. I am also strengthening my TypeScript and Next.js skills through real projects and structured learning.
 
 ---
 
-### 🧠 TaskAi — Smart Task Management SaaS
-A Hebrew RTL SaaS platform inspired by Monday.com, featuring task management, dashboards, and focus tools.  
-Built with Next.js 14, Supabase Auth with RLS, and a clean, scalable product architecture.
-- **Live:** https://task-pp656fwrf-tamar-karwans-projects.vercel.app/
-- **Repo:** https://github.com/tamtam888/TaskAi
+## Featured Projects
+
+### MedicalCare - AI-assisted clinic management platform
+A clinic management platform for therapists, focused on patient records, intake workflows, treatment documentation, appointment scheduling, Hebrew/English support, RTL layout, privacy-aware AI summaries, and video-based progress tracking.
+
+- Live Demo: https://demo-medical-care.vercel.app
+- Repository: https://github.com/tamtam888/MaddCare
+- Tech: React, Vite, Supabase, FullCalendar, Medplum/FHIR, IndexedDB, AI-assisted documentation
 
 ---
 
-### 🎵 VIBE Music — AI-Powered Mood-Based Music Experience
-A music application that organizes listening by mood, energy, and flow instead of traditional playlists.  
-Includes AI-driven sequencing logic, PWA support, and bilingual Hebrew/English UX.
-- **Live:** https://vibe-music-app-phi.vercel.app
-- **Repo:** https://github.com/tamtam888/vibe-music-app
+### VIBE Music - AI-powered mood-based music experience
+A music application that organizes listening around mood, energy, BPM, and flow instead of static playlists. Includes AI-style sequencing logic, PWA support, Supabase sync, and bilingual Hebrew/English UX.
+
+- Live Demo: https://vibe-music-app-phi.vercel.app
+- Repository: https://github.com/tamtam888/vibe-music-app
+- Tech: React, TypeScript-based codebase, Vite, Supabase, PWA, Web Audio API, AI flow logic
 
 ---
 
-### 💼 Job Interview Simulator — AI Interview Practice Platform
-An AI-powered interview preparation tool with role-based questions and structured feedback.  
-Designed to simulate real interview scenarios and improve confidence through guided practice.
-- **Repo:** https://github.com/tamtam888/job-hunt-hub
+### TaskAi - Smart task management SaaS
+A Hebrew RTL task management SaaS inspired by Monday-style workflows, with tasks, projects, dashboards, focus mode, smart filters, protected routes, Supabase Auth, and Row Level Security.
+
+- Repository: https://github.com/tamtam888/TaskAi
+- Tech: Next.js, TypeScript-based codebase, Supabase, Tailwind CSS, shadcn/ui, TanStack Table
 
 ---
 
-### 🕹️ TaskMan — Gamified Productivity App
-A retro-inspired task manager that turns productivity into a game experience.  
-Includes Google OAuth, CI/CD pipelines, and a modular React architecture.
-- **Live:** https://taskman-yellow-user.vercel.app
-- **Repo:** https://github.com/tamtam888/TaskMan
+### TaskMan - Gamified productivity app
+A retro-inspired task manager that turns productivity into a game experience, with priorities, due dates, scoring, levels, Google OAuth, testing, CI/CD, Docker, and a responsive UI.
+
+- Live Demo: https://taskman-yellow-user.vercel.app
+- Repository: https://github.com/tamtam888/TaskMan
+- Tech: React, JavaScript, Google OAuth, GitHub Actions, Docker, Jest, React Testing Library
 
 ---
 
-## 🛠 Tech Stack
-
-
-Frontend: React.js | JavaScript (ES6+) | HTML5 | CSS3 | Tailwind CSS | Vite
-AI & Tools: OpenAI API | Prompt Engineering | Make.com | n8n | AI-assisted development
-DevOps: Docker | GitHub Actions | CI/CD | Jest | Git | Vercel
-HealthTech: Medplum (FHIR) | Supabase | IndexedDB | Media APIs
-Learning: TypeScript (self-learning) | Next.js 14 | Python (basics)
-
+### Job Interview Simulator - In development
+An AI-powered interview preparation tool with role-based questions and structured feedback. This project is currently in development and is not yet part of the public portfolio set.
 
 ---
 
-## 📁 Portfolio Structure
+## Tech Stack
 
+**Frontend:** React, JavaScript, HTML5, CSS3, Tailwind CSS, Vite, Next.js project exposure  
+**Backend and Data:** Supabase, PostgreSQL, RLS, IndexedDB, Medplum/FHIR  
+**AI and Tools:** AI-assisted development, prompt engineering, OpenAI API, Cursor, Make.com, n8n  
+**DevOps:** Git, GitHub Actions, Docker, Vercel, Render  
+**Testing:** Jest, Vitest, React Testing Library, Playwright-ready structure  
+**Learning:** TypeScript, Next.js, Python basics
 
+---
+
+## Portfolio Structure
+
+```text
 MyPortfolio/
-├── index.html # Home / Landing page
-├── about.html # About, skills, projects, experience
-├── projects.html # Projects showcase
-├── style.css # Global styles
-├── images/ # Assets and previews
-└── assets/ # CV downloads
-
-
----
-
-## 📧 Contact
-
-- **Email:** tkarwan@gmail.com  
-- **LinkedIn:** https://linkedin.com/in/tamar-karwan-b4784b256  
-- **GitHub:** https://github.com/tamtam888  
+  index.html      Home / landing page
+  about.html      About, skills, projects, experience
+  projects.html   Projects showcase
+  style.css       Global styles
+  images/         Project previews and assets
+  assets/         CV downloads and supporting files
+```
 
 ---
 
-*Built with React & Empathy 💜*
+## Contact
+
+- Email: tkarwan@gmail.com
+- LinkedIn: https://linkedin.com/in/tamar-karwan-b4784b256
+- GitHub: https://github.com/tamtam888
+
+---
+
+Built with React, JavaScript, and product thinking.
