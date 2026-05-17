@@ -171,8 +171,8 @@
 }
 
 .mc-video-shell {
-  width: 65%;
-  max-width: 720px;
+  width: 70%;
+  max-width: 760px;
   min-width: 360px;
   margin: 0;
   border: 1px solid var(--border);
@@ -437,13 +437,19 @@
    ============================================================ */
 
 .mc-cta-section {
-  background: var(--purple);
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-mid) 100%);
+  padding: 4rem 0;
 }
 
 .mc-cta-inner {
   text-align: center;
-  max-width: 600px;
+  max-width: 680px;
   margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 32px rgba(75, 0, 130, 0.18);
 }
 
 .mc-cta-title {
@@ -456,9 +462,9 @@
 
 .mc-cta-sub {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.86);
   line-height: 1.65;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 .mc-cta-actions {
@@ -466,7 +472,7 @@
   justify-content: center;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.1rem;
 }
 
 .mc-cta-section .mc-btn-primary {
@@ -494,7 +500,7 @@
 .mc-contact-link {
   display: inline-block;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.82);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -532,8 +538,8 @@
   }
 
   .mc-video-shell {
-    width: 70%;
-    max-width: 620px;
+    width: 85%;
+    max-width: 700px;
     min-width: 0;
   }
 
@@ -608,6 +614,10 @@
     padding: 0.5rem;
   }
 
+  .mc-cta-inner {
+    padding: 1.5rem;
+  }
+
   .mc-workflow-step {
     gap: 0.875rem;
   }
@@ -622,5 +632,3 @@
     max-width: 300px;
   }
 }
-
-
