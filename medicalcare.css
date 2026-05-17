@@ -158,6 +158,43 @@
 
 
 /* ============================================================
+   PRODUCT WALKTHROUGH VIDEO
+   ============================================================ */
+
+.mc-video-section {
+  background: #ffffff;
+  padding: 4rem 0;
+}
+
+.mc-video-header {
+  max-width: 720px;
+}
+
+.mc-video-shell {
+  width: 50%;
+  max-width: 560px;
+  min-width: 360px;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0.75rem;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(75, 0, 130, 0.1);
+  overflow: hidden;
+}
+
+.mc-walkthrough-video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  background: var(--bg);
+}
+
+
+/* ============================================================
    PROBLEM SECTION
    ============================================================ */
 
@@ -494,6 +531,12 @@
     font-size: 1.5rem;
   }
 
+  .mc-video-shell {
+    width: 70%;
+    max-width: 620px;
+    min-width: 0;
+  }
+
   .mc-solution-grid {
     grid-template-columns: 1fr;
   }
@@ -557,6 +600,12 @@
 
   .mc-section-title {
     font-size: 1.3rem;
+  }
+
+  .mc-video-shell {
+    width: 100%;
+    max-width: none;
+    padding: 0.5rem;
   }
 
   .mc-workflow-step {
