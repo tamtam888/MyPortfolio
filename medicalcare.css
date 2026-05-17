@@ -15,6 +15,10 @@
   padding: 0 2rem;
 }
 
+main > .container:first-child {
+  padding: 0.9rem 2rem 0.6rem;
+}
+
 .mc-section {
   padding: 3rem 0;
 }
@@ -56,7 +60,21 @@
 .mc-hero {
   background: #ffffff;
   border-bottom: 1px solid var(--border);
-  padding: 2.25rem 0 2.25rem;
+  padding: 1.8rem 0 2rem;
+}
+
+.mc-hero .eyebrow {
+  display: block;
+  width: fit-content;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 0.55rem;
 }
 
 .mc-hero-inner {
@@ -67,7 +85,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 
 .mc-hero-title {
@@ -528,8 +546,12 @@
    ============================================================ */
 
 @media (max-width: 768px) {
+  main > .container:first-child {
+    padding: 0.75rem 1.5rem 0.45rem;
+  }
+
   .mc-hero {
-    padding: 2.25rem 0 2rem;
+    padding: 2rem 0 1.75rem;
   }
 
   .mc-hero-title {
@@ -585,8 +607,12 @@
     padding: 0 1rem;
   }
 
+  main > .container:first-child {
+    padding: 0.65rem 1rem 0.35rem;
+  }
+
   .mc-hero {
-    padding: 2rem 0 1.75rem;
+    padding: 1.75rem 0 1.5rem;
   }
 
   .mc-hero-title {
