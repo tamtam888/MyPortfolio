@@ -171,8 +171,8 @@
 }
 
 .mc-video-shell {
-  width: 50%;
-  max-width: 560px;
+  width: 65%;
+  max-width: 720px;
   min-width: 360px;
   margin: 0;
   border: 1px solid var(--border);
@@ -622,3 +622,4 @@
     max-width: 300px;
   }
 }
+
