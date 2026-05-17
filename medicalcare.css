@@ -16,7 +16,7 @@
 }
 
 .mc-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .mc-section-alt {
@@ -37,7 +37,7 @@
   font-weight: 800;
   color: var(--purple);
   letter-spacing: -0.03em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 
 .mc-section-intro {
@@ -45,7 +45,7 @@
   color: var(--muted);
   line-height: 1.75;
   max-width: 720px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.8rem;
 }
 
 
@@ -56,7 +56,7 @@
 .mc-hero {
   background: #ffffff;
   border-bottom: 1px solid var(--border);
-  padding: 4rem 0 3.5rem;
+  padding: 3.5rem 0 3rem;
 }
 
 .mc-hero-inner {
@@ -96,7 +96,7 @@
   font-size: 0.875rem;
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .mc-hero-actions {
@@ -163,7 +163,7 @@
 
 .mc-video-section {
   background: #ffffff;
-  padding: 4rem 0;
+  padding: 3.5rem 0;
 }
 
 .mc-video-header {
@@ -204,7 +204,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .mc-problem-item {
@@ -227,7 +227,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .mc-problem-item p {
@@ -245,17 +245,17 @@
 .mc-solution-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
 .mc-solution-point {
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.35rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .mc-solution-icon {
@@ -269,7 +269,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .mc-solution-point p {
@@ -287,7 +287,7 @@
 .mc-modules-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .mc-module-card-wide {
@@ -298,7 +298,7 @@
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 1.5rem;
+  padding: 1.35rem;
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
@@ -309,20 +309,20 @@
 
 .mc-module-icon {
   color: var(--purple);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 
 .mc-module-title {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .mc-module-desc {
   font-size: 0.875rem;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.65;
   margin: 0;
 }
 
@@ -343,9 +343,9 @@
 
 .mc-workflow-step {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.1rem;
   align-items: flex-start;
-  padding: 1.5rem 0;
+  padding: 1.15rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -355,12 +355,12 @@
 
 .mc-step-number {
   flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: var(--purple-light);
   color: var(--purple);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -373,7 +373,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .mc-step-content p {
@@ -391,15 +391,15 @@
 .mc-tech-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .mc-tech-item {
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.1rem 1.35rem;
 }
 
 .mc-tech-label {
@@ -407,27 +407,27 @@
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--purple);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .mc-tech-desc {
   font-size: 0.85rem;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .mc-tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .mc-tag {
   background: var(--tag-bg);
   color: var(--tag-color);
   border-radius: 999px;
-  padding: 0.28rem 0.7rem;
-  font-size: 0.78rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.76rem;
   font-weight: 600;
 }
 
@@ -438,7 +438,7 @@
 
 .mc-cta-section {
   background: #ffffff;
-  padding: 2rem 0 3.25rem;
+  padding: 1.75rem 0 3rem;
   border-top: 1px solid var(--border);
 }
 
@@ -458,14 +458,14 @@
   font-weight: 800;
   color: var(--purple);
   letter-spacing: -0.025em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
 }
 
 .mc-cta-sub {
   font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.65;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .mc-cta-actions {
@@ -473,7 +473,7 @@
   justify-content: center;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .mc-cta-section .mc-btn-primary {
@@ -537,11 +537,15 @@
   }
 
   .mc-section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 
   .mc-section-title {
     font-size: 1.5rem;
+  }
+
+  .mc-section-intro {
+    margin-bottom: 1.5rem;
   }
 
   .mc-video-shell {
@@ -608,11 +612,15 @@
   }
 
   .mc-section {
-    padding: 2.5rem 0;
+    padding: 2.25rem 0;
   }
 
   .mc-section-title {
     font-size: 1.3rem;
+  }
+
+  .mc-section-intro {
+    margin-bottom: 1.35rem;
   }
 
   .mc-video-shell {
@@ -622,7 +630,7 @@
   }
 
   .mc-cta-section {
-    padding: 1.75rem 0 2.5rem;
+    padding: 1.5rem 0 2.25rem;
   }
 
   .mc-cta-inner {
@@ -631,6 +639,7 @@
 
   .mc-workflow-step {
     gap: 0.875rem;
+    padding: 1rem 0;
   }
 
   .mc-cta-actions {
