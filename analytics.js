@@ -2,11 +2,11 @@
   'use strict';
 
   // ── Configuration ──────────────────────────────────────────────────────────
-  // Replace both values with your Supabase project URL and anon public key.
-  // The anon key is safe to commit — RLS restricts it to INSERT only.
+  // Supabase project URL and publishable key (formerly called the anon key).
+  // The publishable key is safe to commit — RLS restricts it to INSERT only.
   // Never place the service role key here or in any public file.
-  var SUPABASE_URL  = 'REPLACE_WITH_YOUR_SUPABASE_PROJECT_URL';
-  var SUPABASE_ANON = 'REPLACE_WITH_YOUR_SUPABASE_ANON_PUBLIC_KEY';
+  var SUPABASE_URL  = 'https://xxinwbyllosccozlsgcf.supabase.co';
+  var SUPABASE_ANON = 'sb_publishable_8JD3wmmBDn1wVzcDTXLGyg_Y-BwJwkI';
 
   // ── Debug mode ─────────────────────────────────────────────────────────────
   // Visit any page with ?debugAnalytics=true to enable console output.
