@@ -61,7 +61,7 @@ jobs:
               daily_rows    = supabase_get("analytics_daily_summary?select=date,total_page_views,unique_visitors,total_clicks&order=date.desc&limit=2")
               click_rows    = supabase_get("analytics_click_summary?select=event_type,total_clicks&order=total_clicks.desc")
               project_rows  = supabase_get("analytics_project_click_summary?select=target,total_clicks&order=total_clicks.desc")
-              source_rows   = supabase_get("analytics_source_summary?select=source,total_views&order=total_views.desc&limit=5")
+              source_rows   = supabase_get("analytics_source_summary?select=source,total_views&order=total_views.desc&limit=20")
           except Exception as exc:
               raise SystemExit(f"Failed to read analytics data from Supabase: {exc}")
 
@@ -120,29 +120,38 @@ jobs:
           def normalize_source_label(raw):
               s = (raw or "direct").lower().strip()
               SOURCE_MAP = {
-                  "linkedin":         "LinkedIn",
-                  "linkedin.com":     "LinkedIn",
-                  "www.linkedin.com": "LinkedIn",
-                  "linkedin_dm":      "LinkedIn DM",
-                  "facebook":         "Facebook",
-                  "facebook.com":     "Facebook",
-                  "www.facebook.com": "Facebook",
-                  "l.facebook.com":   "Facebook",
-                  "lm.facebook.com":  "Facebook",
-                  "whatsapp":         "WhatsApp",
-                  "web.whatsapp.com": "WhatsApp",
-                  "cv":               "CV",
-                  "github":           "GitHub",
-                  "github.com":       "GitHub",
-                  "direct":           "Direct",
-                  "none":             "None",
+                  "linkedin":                "LinkedIn",
+                  "linkedin.com":            "LinkedIn",
+                  "www.linkedin.com":        "LinkedIn",
+                  "linkedin_dm":             "LinkedIn DM",
+                  "facebook":                "Facebook",
+                  "facebook.com":            "Facebook",
+                  "www.facebook.com":        "Facebook",
+                  "l.facebook.com":          "Facebook",
+                  "lm.facebook.com":         "Facebook",
+                  "whatsapp":                "WhatsApp",
+                  "web.whatsapp.com":        "WhatsApp",
+                  "cv":                      "CV",
+                  "github":                  "GitHub",
+                  "github.com":              "GitHub",
+                  "direct":                  "Direct",
+                  "none":                    "None",
+                  "tamtam888.github.io":     "Internal navigation",
+                  "www.tamtam888.github.io": "Internal navigation",
               }
               return SOURCE_MAP.get(s, s.capitalize())
 
-          source_lines = []
-          for row in source_rows[:5]:
+          # Aggregate totals by readable label before trimming to top 5.
+          # Multiple raw sources that map to the same label (e.g. facebook.com
+          # and l.facebook.com both → "Facebook") are summed into one entry.
+          source_totals = {}
+          for row in source_rows:
               label = normalize_source_label(row.get("source"))
               views = row.get("total_views") or 0
+              source_totals[label] = source_totals.get(label, 0) + views
+
+          source_lines = []
+          for label, views in sorted(source_totals.items(), key=lambda x: x[1], reverse=True)[:5]:
               source_lines.append(f"- {label}: {views} views")
           if not source_lines:
               source_lines.append("- No source data yet")
