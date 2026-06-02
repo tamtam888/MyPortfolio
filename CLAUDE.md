@@ -137,3 +137,67 @@ See `docs/DESIGN_SYSTEM.md` for full tone and writing guidelines.
 - Do not push to any remote branch without explicit instruction.
 - Do not rename or delete files without explicit instruction.
 - Do not add third-party scripts, tracking pixels, or analytics without explicit instruction.
+
+---
+
+## Change Protocol
+
+Follow this process before touching any file:
+
+1. **Protect existing behavior.** Never rewrite, redesign, rename, remove, or refactor any existing feature unless the user explicitly requests it.
+2. **Prefer additive changes.** Create new files instead of modifying existing ones whenever possible.
+3. **Smallest possible change.** If an existing file must be changed, make the minimum edit required — one line if one line is enough.
+4. **Never change without a plan.** Before editing any file, state exactly which files will be created or modified and why. Wait for approval.
+5. **Never change:** existing colors, fonts, layout, page routes, or button behavior unless explicitly instructed.
+6. **After every change:** write a short summary of what changed and how to test it.
+
+---
+
+## Analytics — Privacy and Tracking Rules
+
+These rules apply to all analytics work in this project.
+
+**What to track:**
+- Page views — logged per page, per visit.
+- Unique visitors — counted once per visitor per calendar day.
+- Traffic sources — UTM parameters only: `utm_source`, `utm_medium`, `utm_campaign`.
+- Click events — tracked separately from page views. Tracked events:
+  - GitHub button click
+  - LinkedIn button click
+  - CV download click
+  - Contact / email click
+  - Project card click
+
+**What not to collect — ever:**
+- Names
+- Email addresses
+- IP addresses
+- LinkedIn profiles
+- Facebook profiles
+- Any other personally identifiable information (PII)
+- Device fingerprints or browser fingerprints tied to a real identity
+
+**Anonymous visitor IDs only.**
+Use a random session ID stored in `sessionStorage` (clears on tab close). Do not persist a cross-session user ID.
+
+**Owner exclusion:**
+- Visiting any page with `?owner=true` sets `localStorage` key `portfolio_owner = 'true'`.
+- On every page load, check this key first. If it is `'true'`, stop all tracking immediately.
+- Owner visits and owner clicks must never be counted or sent to any backend.
+- This must work on both desktop and mobile browsers.
+
+**Notification channels:**
+- Telegram daily report is the MVP notification channel. Implement this first.
+- WhatsApp is a future feature only. Do not implement it until explicitly requested.
+
+**Privacy design principle:** build analytics to understand engagement, not to identify individuals.
+
+---
+
+## Development Principles
+
+- Keep the project simple, readable, and stable.
+- Do not add complexity beyond what the task requires.
+- Do not introduce abstractions, helpers, or utilities unless the task clearly needs them.
+- Three clear lines are better than one clever abstraction.
+- When in doubt, do less and ask.
