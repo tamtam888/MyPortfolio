@@ -23,6 +23,7 @@ jobs:
           import os
           import sys
           import urllib.request
+          from datetime import datetime, timezone
 
           required = [
               "SUPABASE_URL",
@@ -57,25 +58,52 @@ jobs:
 
           try:
               last_24h_rows = supabase_get("analytics_last_24_hours?select=*")
-              click_rows = supabase_get("analytics_click_summary?select=event_type,total_clicks&order=total_clicks.desc")
-              project_rows = supabase_get("analytics_project_click_summary?select=target,total_clicks&order=total_clicks.desc")
+              daily_rows    = supabase_get("analytics_daily_summary?select=date,total_page_views,unique_visitors,total_clicks&order=date.desc&limit=2")
+              click_rows    = supabase_get("analytics_click_summary?select=event_type,total_clicks&order=total_clicks.desc")
+              project_rows  = supabase_get("analytics_project_click_summary?select=target,total_clicks&order=total_clicks.desc")
           except Exception as exc:
               raise SystemExit(f"Failed to read analytics data from Supabase: {exc}")
 
           summary = last_24h_rows[0] if last_24h_rows else {}
 
           total_page_views = summary.get("total_page_views") or 0
-          unique_visitors = summary.get("unique_visitors") or 0
-          total_clicks = summary.get("total_clicks") or 0
-          top_source = summary.get("top_source") or "none"
-          top_page = summary.get("top_page") or "none"
+          unique_visitors  = summary.get("unique_visitors") or 0
+          total_clicks     = summary.get("total_clicks") or 0
+          top_source       = summary.get("top_source") or "none"
+          top_page         = summary.get("top_page") or "none"
+
+          # --- Yesterday comparison (calendar day totals) ---
+          today_row     = daily_rows[0] if len(daily_rows) > 0 else {}
+          yesterday_row = daily_rows[1] if len(daily_rows) > 1 else {}
+          has_yesterday = bool(yesterday_row)
+
+          def fmt_delta(today_val, yest_val):
+              d = today_val - yest_val
+              if d > 0: return f"  (▲ +{d} vs yesterday)"
+              if d < 0: return f"  (▼ {d} vs yesterday)"
+              return "  (→ 0 vs yesterday)"
+
+          if has_yesterday:
+              views_delta    = fmt_delta(today_row.get("total_page_views") or 0, yesterday_row.get("total_page_views") or 0)
+              visitors_delta = fmt_delta(today_row.get("unique_visitors") or 0,  yesterday_row.get("unique_visitors") or 0)
+              clicks_delta   = fmt_delta(today_row.get("total_clicks") or 0,     yesterday_row.get("total_clicks") or 0)
+          else:
+              views_delta = visitors_delta = clicks_delta = ""
+
+          # --- Readable click labels ---
+          CLICK_LABELS = {
+              "github_click":   "GitHub",
+              "linkedin_click": "LinkedIn",
+              "cv_download":    "CV Download",
+              "contact_click":  "Contact",
+              "project_click":  "Project cards",
+          }
 
           click_lines = []
           for row in click_rows[:5]:
-              event_type = row.get("event_type") or "unknown"
+              label  = CLICK_LABELS.get(row.get("event_type") or "", row.get("event_type") or "unknown")
               clicks = row.get("total_clicks") or 0
-              click_lines.append(f"- {event_type}: {clicks}")
-
+              click_lines.append(f"- {label}: {clicks}")
           if not click_lines:
               click_lines.append("- No clicks yet")
 
@@ -84,17 +112,43 @@ jobs:
               target = row.get("target") or "unknown"
               clicks = row.get("total_clicks") or 0
               project_lines.append(f"- {target}: {clicks}")
-
           if not project_lines:
               project_lines.append("- No project clicks yet")
 
+          # --- Insight sentence ---
+          today_views_daily = today_row.get("total_page_views") or 0
+          yest_views_daily  = yesterday_row.get("total_page_views") or 0
+
+          if total_page_views == 0:
+              insight = "No visits recorded in the last 24 hours."
+          elif not has_yesterday:
+              insight = "Not enough history for a comparison yet."
+          elif yest_views_daily > 0:
+              pct = (today_views_daily - yest_views_daily) / yest_views_daily * 100
+              if pct >= 50:
+                  insight = "Traffic is up significantly vs yesterday."
+              elif pct <= -50:
+                  insight = "Traffic is notably down vs yesterday."
+              elif top_source not in ("direct", "none"):
+                  insight = f"Most traffic arrived from {top_source} today."
+              else:
+                  insight = "Traffic is steady compared to yesterday."
+          elif top_source not in ("direct", "none"):
+              insight = f"Most traffic arrived from {top_source} today."
+          else:
+              insight = "Traffic is steady compared to yesterday."
+
+          # --- Report date header ---
+          now = datetime.now(timezone.utc)
+          report_date = f"{now.day} {now.strftime('%b %Y')}"
+
           message = "\n".join([
-              "📊 Portfolio Daily Report",
+              f"📊 Portfolio Report — {report_date}",
               "",
               "Last 24 hours:",
-              f"👁 Page views: {total_page_views}",
-              f"👤 Unique visitors: {unique_visitors}",
-              f"🖱 Total clicks: {total_clicks}",
+              f"👁 Page views: {total_page_views}{views_delta}",
+              f"👤 Unique visitors: {unique_visitors}{visitors_delta}",
+              f"🖱 Total clicks: {total_clicks}{clicks_delta}",
               f"🔗 Top source: {top_source}",
               f"📄 Top page: {top_page}",
               "",
@@ -103,6 +157,8 @@ jobs:
               "",
               "Project clicks:",
               *project_lines,
+              "",
+              f"💡 {insight}",
           ])
 
           telegram_url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
