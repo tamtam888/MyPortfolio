@@ -23,7 +23,8 @@ jobs:
           import os
           import sys
           import urllib.request
-          from datetime import datetime, timezone
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
 
           required = [
               "SUPABASE_URL",
@@ -70,8 +71,15 @@ jobs:
           total_page_views = summary.get("total_page_views") or 0
           unique_visitors  = summary.get("unique_visitors") or 0
           total_clicks     = summary.get("total_clicks") or 0
-          top_source       = summary.get("top_source") or "none"
-          top_page         = summary.get("top_page") or "none"
+          top_source     = summary.get("top_source") or "none"
+          top_page_raw   = summary.get("top_page") or ""
+          PAGE_LABELS    = {
+              "index":       "Home",
+              "projects":    "Projects",
+              "about":       "About",
+              "medicalcare": "MedicalCare",
+          }
+          top_page_label = PAGE_LABELS.get(top_page_raw, "Unknown page") if top_page_raw else "Unknown page"
 
           # --- Yesterday comparison (calendar day totals) ---
           today_row     = daily_rows[0] if len(daily_rows) > 0 else {}
@@ -180,7 +188,7 @@ jobs:
               insight = "Traffic is steady compared to yesterday."
 
           # --- Report date header ---
-          now = datetime.now(timezone.utc)
+          now = datetime.now(ZoneInfo("Asia/Jerusalem"))
           report_date = f"{now.day} {now.strftime('%b %Y')}"
 
           message = "\n".join([
@@ -191,7 +199,7 @@ jobs:
               f"👤 Unique visitors: {unique_visitors}{visitors_delta}",
               f"🖱 Total clicks: {total_clicks}{clicks_delta}",
               f"🔗 Top source: {top_source}",
-              f"📄 Top page: {top_page}",
+              f"📄 Top page: {top_page_label}",
               "",
               "Clicks by type:",
               *click_lines,
