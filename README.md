@@ -4,7 +4,7 @@
 
 I build practical, human-centered web applications with clean frontend architecture, real user workflows, responsive UX, and secure data handling.
 
-[Live Portfolio](https://tamtam888.github.io/MyPortfolio/) | [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) | [GitHub](https://github.com/tamtam888)
+[Live Portfolio](https://tamtam888.github.io/MyPortfolio/?utm_source=github&utm_medium=repo&utm_campaign=myportfolio_readme) | [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) | [GitHub](https://github.com/tamtam888)
 
 ---
 
