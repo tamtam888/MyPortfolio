@@ -72,12 +72,18 @@ jobs:
           unique_visitors  = summary.get("unique_visitors") or 0
           total_clicks     = summary.get("total_clicks") or 0
           top_source     = summary.get("top_source") or "none"
-          top_page_raw   = summary.get("top_page") or ""
+          top_page_raw   = (summary.get("top_page") or "").lower().strip()
           PAGE_LABELS    = {
-              "index":       "Home",
-              "projects":    "Projects",
-              "about":       "About",
-              "medicalcare": "MedicalCare",
+              "index":            "Home",
+              "/":                "Home",
+              "projects":         "Projects",
+              "projects.html":    "Projects",
+              "about":            "About",
+              "about.html":       "About",
+              "medicalcare":      "MedicalCare",
+              "medicalcare.html": "MedicalCare",
+              "unknown":          "Unknown page",
+              "none":             "Unknown page",
           }
           top_page_label = PAGE_LABELS.get(top_page_raw, "Unknown page") if top_page_raw else "Unknown page"
 
