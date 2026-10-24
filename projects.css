@@ -381,3 +381,10 @@ footer {
     display: none;
   }
 }
+/* Interview Simulator featured project */
+.interview-preview{position:relative;overflow:hidden;background:linear-gradient(135deg,#f9f7ff 0%,#e7e0ff 70%,#d5c8fa 100%);min-height:220px;display:flex;align-items:center;padding:28px;border:1px solid #e3dafa}
+.interview-preview-content{display:flex;flex-direction:column;align-items:flex-start;gap:12px;color:#2c2158}
+.interview-preview-content strong{font-size:clamp(1.3rem,2.5vw,2rem);line-height:1.2}
+.interview-preview-kicker{font-size:.68rem;font-weight:800;letter-spacing:.13em;color:#6044bb}
+.interview-preview-content>span:nth-of-type(2){font-size:.8rem}
+.interview-preview-pill{background:#6045cc;color:white;padding:9px 13px;border-radius:22px;font-size:.75rem;font-weight:700}
