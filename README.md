@@ -1,94 +1,77 @@
-# Tamar Karwan - Portfolio
+# Tamar Karwan — Frontend & Product-Focused Developer
 
-**Frontend Developer | React & JavaScript | HealthTech & AI-powered web applications**
+I build human-centered web applications with React, JavaScript, practical product thinking, and AI-assisted workflows. My portfolio highlights HealthTech, interview preparation, customer support, music, and productivity products.
 
-I build practical, human-centered web applications with clean frontend architecture, real user workflows, responsive UX, and secure data handling.
+**[Live Portfolio](https://tamtam888.github.io/MyPortfolio/)** · **[Projects](https://tamtam888.github.io/MyPortfolio/projects.html)** · [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) · [GitHub](https://github.com/tamtam888)
 
-[Live Portfolio](https://tamtam888.github.io/MyPortfolio/?utm_source=github&utm_medium=repo&utm_campaign=myportfolio_readme) | [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) | [GitHub](https://github.com/tamtam888)
+## Featured work
 
----
+The projects below match the current public portfolio and appear in the same order.
 
-## About
+### 1. MedicalCare — HealthTech platform
+A beta clinic-management platform shared with therapists for workflow feedback. The public demo uses fictional patient data. Includes patient records, treatment workflows, scheduling, bilingual/RTL UX, privacy-aware AI-assisted summaries, and video-based progress tracking.
 
-Frontend developer with a unique background in therapy and human-centered work. I combine React, JavaScript, product thinking, and AI-assisted workflows to build tools that solve real user problems.
+[Live demo](https://demo-medical-care.vercel.app/) · [Repository](https://github.com/tamtam888/MaddCare)
 
-My main focus is building practical frontend products in HealthTech, productivity, and AI-supported user experiences. I am also strengthening my TypeScript and Next.js skills through real projects and structured learning.
+**Stack:** React, JavaScript, Supabase, FullCalendar, Medplum/FHIR, IndexedDB.
 
----
+### 2. InterviewSim — AI-assisted interview practice
+A **live**, bilingual interview simulator for ten professional roles. Choose an interviewer and interview format, practice by typing or using voice input where supported, and review structured scoring, strengths, improvement suggestions, and session summaries. AI evaluation is optional; local practice feedback is available without an API connection.
 
-## Featured Projects
+[Live demo](https://interview-sim-ten.vercel.app/) · [Repository](https://github.com/tamtam888/InterviewSim)
 
-### MedicalCare - AI-assisted clinic management platform
-A clinic management platform for therapists, focused on patient records, intake workflows, treatment documentation, appointment scheduling, Hebrew/English support, RTL layout, privacy-aware AI summaries, and video-based progress tracking.
+**Stack:** React, JavaScript, Vite, optional OpenAI API, Hebrew RTL, voice input.
 
-- Live Demo: https://demo-medical-care.vercel.app
-- Repository: https://github.com/tamtam888/MaddCare
-- Tech: React, Vite, Supabase, FullCalendar, Medplum/FHIR, IndexedDB, AI-assisted documentation
+### 3. CX Agent Assist — customer support prototype
+A frontend MVP for support workflows using mock AI-style analysis to identify intent, sentiment, and priority and propose replies and next actions. This is a prototype, not a production AI integration.
 
----
+[Live demo](https://cx-agent-assist.vercel.app/) · [Repository](https://github.com/tamtam888/CX-Agent-Assist)
 
-### VIBE Music - AI-powered mood-based music experience
-A music application that organizes listening around mood, energy, BPM, and flow instead of static playlists. Includes AI-style sequencing logic, PWA support, Supabase sync, and bilingual Hebrew/English UX.
+**Stack:** React, JavaScript, Vite.
 
-- Live Demo: https://vibe-music-app-phi.vercel.app
-- Repository: https://github.com/tamtam888/vibe-music-app
-- Tech: React, TypeScript-based codebase, Vite, Supabase, PWA, Web Audio API, AI flow logic
+### 4. VIBE Music — mood-first music experience
+Music discovery organized around mood, energy, BPM, and flow, with AI-style sequencing logic and PWA capabilities.
 
----
+[Live demo](https://vibe-music-app-phi.vercel.app/) · [Repository](https://github.com/tamtam888/vibe-music-app)
 
-### TaskAi - Smart task management SaaS
-A Hebrew RTL task management SaaS inspired by Monday-style workflows, with tasks, projects, dashboards, focus mode, smart filters, protected routes, Supabase Auth, and Row Level Security.
+**Stack:** React, TypeScript-based codebase, Supabase, PWA, Web Audio API.
 
-- Repository: https://github.com/tamtam888/TaskAi
-- Tech: Next.js, TypeScript-based codebase, Supabase, Tailwind CSS, shadcn/ui, TanStack Table
+### 5. TaskAi — Hebrew RTL task management SaaS
+Tasks, projects, dashboards, focus mode, smart filters, protected routes, and per-user data access.
 
----
+[Live app](https://task-1mezh0h1x-tamar-karwans-projects.vercel.app/login) · [Repository](https://github.com/tamtam888/TaskAi)
 
-### TaskMan - Gamified productivity app
-A retro-inspired task manager that turns productivity into a game experience, with priorities, due dates, scoring, levels, Google OAuth, testing, CI/CD, Docker, and a responsive UI.
+**Stack:** Next.js, TypeScript-based codebase, Supabase, RLS, shadcn/ui.
 
-- Live Demo: https://taskman-yellow-user.vercel.app
-- Repository: https://github.com/tamtam888/TaskMan
-- Tech: React, JavaScript, Google OAuth, GitHub Actions, Docker, Jest, React Testing Library
+### 6. TaskMan — gamified productivity
+A retro-inspired task manager with priorities, deadlines, scoring, levels, Google OAuth, testing, Docker, and CI/CD.
 
----
+[Live demo](https://taskman-yellow-user.vercel.app/) · [Repository](https://github.com/tamtam888/TaskMan)
 
-### Job Interview Simulator - In development
-An AI-powered interview preparation tool with role-based questions and structured feedback. This project is currently in development and is not yet part of the public portfolio set.
+**Stack:** React, JavaScript, Jest, Docker, GitHub Actions.
 
----
+## About this portfolio repository
 
-## Tech Stack
-
-**Frontend:** React, JavaScript, HTML5, CSS3, Tailwind CSS, Vite, Next.js project exposure  
-**Backend and Data:** Supabase, PostgreSQL, RLS, IndexedDB, Medplum/FHIR  
-**AI and Tools:** AI-assisted development, prompt engineering, OpenAI API, Cursor, Make.com, n8n  
-**DevOps:** Git, GitHub Actions, Docker, Vercel, Render  
-**Testing:** Jest, Vitest, React Testing Library, Playwright-ready structure  
-**Learning:** TypeScript, Next.js, Python basics
-
----
-
-## Portfolio Structure
+**MyPortfolio is a static website built with HTML, CSS, and JavaScript**, hosted on GitHub Pages. The showcased applications are separate repositories and may use React, Vite, Next.js, Supabase, and other tools. This distinction matters: the portfolio website itself is not a React application.
 
 ```text
 MyPortfolio/
-  index.html      Home / landing page
-  about.html      About, skills, projects, experience
-  projects.html   Projects showcase
-  style.css       Global styles
-  images/         Project previews and assets
-  assets/         CV downloads and supporting files
+├── index.html        # Home and featured work
+├── about.html        # Background, skills, and resume
+├── projects.html     # Featured project cards and live/code links
+├── medicalcare.html  # MedicalCare case study
+├── style.css         # Home/global styling
+├── projects.css      # Project-page styling
+├── images/           # Project cover images
+└── assets/           # Resume downloads and other assets
 ```
 
----
+The InterviewSim card uses the uploaded `images/InterviewSim AI Interview Simulator.png` artwork and links directly to its live application. The incomplete screenshots page was intentionally removed.
 
 ## Contact
 
-- Email: tkarwan@gmail.com
-- LinkedIn: https://linkedin.com/in/tamar-karwan-b4784b256
-- GitHub: https://github.com/tamtam888
+[LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) · [GitHub](https://github.com/tamtam888) · [Email](mailto:tkarwan@gmail.com)
 
 ---
 
-Built with React, JavaScript, and product thinking.
+Portfolio site: HTML · CSS · JavaScript · GitHub Pages.
