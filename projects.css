@@ -388,3 +388,5 @@ footer {
 .interview-preview-kicker{font-size:.68rem;font-weight:800;letter-spacing:.13em;color:#6044bb}
 .interview-preview-content>span:nth-of-type(2){font-size:.8rem}
 .interview-preview-pill{background:#6045cc;color:white;padding:9px 13px;border-radius:22px;font-size:.75rem;font-weight:700}
+
+.interview-cover-link{display:block;position:relative;width:100%;text-decoration:none}.interview-hero-image{display:block;width:100%;height:auto;object-fit:cover;margin:0;border-radius:12px}.interview-cover-fallback{display:none;min-height:190px;padding:28px;flex-direction:column;justify-content:center;gap:12px;color:#2b215b}.interview-cover-fallback strong{font-size:2rem}.interview-hero-image[hidden]+.interview-cover-fallback{display:flex}
