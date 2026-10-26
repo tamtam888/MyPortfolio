@@ -383,3 +383,15 @@ footer {
 }
 /* InterviewSim portfolio cover */
 .interview-cover-link{display:block;position:relative;width:100%;text-decoration:none}.interview-hero-image{display:block;width:100%;height:auto;object-fit:cover;margin:0}.interview-cover-fallback{display:none;min-height:190px;padding:28px;flex-direction:column;justify-content:center;gap:12px;background:linear-gradient(135deg,#f9f7ff,#e2d8ff);color:#2b215b}.interview-cover-fallback strong{font-size:2rem}.interview-hero-image[hidden]+.interview-cover-fallback{display:flex}
+
+/* Flagship project polish: readable copy and consistent paired cards */
+.flagship-card .project-body { padding: 1.2rem 1.25rem 1.3rem; }
+.flagship-card .project-body h4 { font-size: 1.08rem; line-height: 1.4; }
+.flagship-card .project-body p { line-height: 1.72; }
+.flagship-card .demo-note { font-size: 0.79rem; color: var(--muted); }
+.flagship-card .links { margin-top: auto; padding-top: 0.3rem; }
+.flagship-card:not(.featured-main) { display: flex; flex-direction: column; }
+.flagship-card:not(.featured-main) .project-body { display: flex; flex: 1; flex-direction: column; }
+.flagship-card:not(.featured-main) .project-tags { margin-top: auto; }
+.flagship-card .links a:focus-visible, .interview-cover-link:focus-visible { outline: 2px solid var(--purple-mid); outline-offset: 3px; border-radius: 3px; }
+@media (max-width: 700px) { .flagship-card .project-body { padding: 1rem; } }
