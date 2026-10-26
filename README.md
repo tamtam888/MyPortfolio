@@ -22,12 +22,12 @@ A **live**, bilingual interview simulator for ten professional roles. Choose an 
 
 **Stack:** React, JavaScript, Vite, optional OpenAI API, Hebrew RTL, voice input.
 
-### 3. CX Agent Assist — customer support prototype
-A frontend MVP for support workflows using mock AI-style analysis to identify intent, sentiment, and priority and propose replies and next actions. This is a prototype, not a production AI integration.
+### 3. CX Agent Assist - AI-assisted customer support
+An interactive customer support workspace for fictional tickets, a searchable knowledge base, internal notes, and suggested responses. Supports rules-based guidance and optional live AI-powered multi-turn conversations through a server-side API. No real customer messages are sent.
 
 [Live demo](https://cx-agent-assist.vercel.app/) · [Repository](https://github.com/tamtam888/CX-Agent-Assist)
 
-**Stack:** React, JavaScript, Vite.
+**Stack:** React, JavaScript, Vite, OpenAI API (optional), Vercel Functions.
 
 ### 4. VIBE Music — mood-first music experience
 Music discovery organized around mood, energy, BPM, and flow, with AI-style sequencing logic and PWA capabilities.
@@ -66,7 +66,7 @@ MyPortfolio/
 └── assets/           # Resume downloads and other assets
 ```
 
-The InterviewSim card uses the uploaded `images/InterviewSim AI Interview Simulator.png` artwork and links directly to its live application. The incomplete screenshots page was intentionally removed.
+The InterviewSim and CX Agent Assist cards use verified screenshots stored in `images/`. The three flagship projects appear first across Home, About, Projects, and this README. The private math tutor project is in development and is not yet listed as a completed showcase.
 
 ## Contact
 
