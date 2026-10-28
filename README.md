@@ -1,4 +1,4 @@
-# Tamar Karwan — Frontend & Product-Focused Developer
+# Tamar Karwan — Frontend & AI Application Developer
 
 I build human-centered web applications with React, JavaScript, practical product thinking, and AI-assisted workflows. My portfolio highlights HealthTech, interview preparation, customer support, music, and productivity products.
 
@@ -16,7 +16,7 @@ A beta clinic-management platform shared with therapists for workflow feedback. 
 **Stack:** React, JavaScript, Supabase, FullCalendar, Medplum/FHIR, IndexedDB.
 
 ### 2. InterviewSim — AI-assisted interview practice
-A **live**, bilingual interview simulator for ten professional roles. Choose an interviewer and interview format, practice by typing or using voice input where supported, and review structured scoring, strengths, improvement suggestions, and session summaries. AI evaluation is optional; local practice feedback is available without an API connection.
+A **live**, bilingual interview simulator for ten professional roles. Choose an interviewer and interview format, practice by typing or using voice input where supported, listen to the original or rephrased question, and review structured scoring, strengths, improvement suggestions, and session summaries. AI evaluation is optional; local practice feedback is available without an API connection.
 
 [Live demo](https://interview-sim-ten.vercel.app/) · [Repository](https://github.com/tamtam888/InterviewSim)
 
