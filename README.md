@@ -1,6 +1,6 @@
-# Tamar Karwan — Frontend & AI Application Developer
+# Tamar Karwan | Frontend Developer & AI Integration
 
-I build human-centered web applications with React, JavaScript, practical product thinking, and AI-assisted workflows. My portfolio highlights HealthTech, interview preparation, customer support, music, and productivity products.
+I build human-centered web applications with React and JavaScript, and integrate AI capabilities into existing and new products. My portfolio highlights HealthTech, interview preparation, customer support, music, and productivity products.
 
 **[Live Portfolio](https://tamtam888.github.io/MyPortfolio/)** · **[Projects](https://tamtam888.github.io/MyPortfolio/projects.html)** · [LinkedIn](https://linkedin.com/in/tamar-karwan-b4784b256) · [GitHub](https://github.com/tamtam888)
 
