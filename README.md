@@ -1,4 +1,4 @@
-# Tamar Karwan | Frontend Developer & AI Integration
+# Tamar Karwan | Frontend Developer · React & JavaScript · AI-Assisted Development · AI Integration
 
 I build human-centered web applications with React and JavaScript, and integrate AI capabilities into existing and new products. My portfolio highlights HealthTech, interview preparation, customer support, music, and productivity products.
 
